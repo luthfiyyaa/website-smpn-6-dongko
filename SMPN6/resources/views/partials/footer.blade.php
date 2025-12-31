@@ -3,9 +3,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <!-- About Section -->
             <div>
-                <h3 class="text-white mb-6">Harmony Academy</h3>
+                <h3 class="text-white mb-6">SMP Negeri 6 Dongko</h3>
                 <p class="text-[var(--color-neutral-300)] mb-6 leading-relaxed">
-                    Empowering students to achieve excellence through quality education and holistic development.
+                    Memberdayakan siswa untuk mencapai keunggulan melalui pendidikan berkualitas dan pengembangan teknologi.
                 </p>
             </div>
 
@@ -13,16 +13,16 @@
             <div>
                 <h4 class="text-white mb-6">Quick Links</h4>
                 <ul class="space-y-3">
-                    <li><a href="{{ route('profile') }}" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="{{ route('academics') }}" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">Academics</a></li>
-                    <li><a href="{{ route('ppdb') }}" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">Admissions</a></li>
-                    <li><a href="#contact" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="{{ route('profile') }}" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">Tentang Kami</a></li>
+                    <li><a href="{{ route('academics') }}" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">Akademik</a></li>
+                    <li><a href="{{ route('ppdb') }}" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">PPDB</a></li>
+                    <li><a href="#contact" class="text-[var(--color-neutral-300)] hover:text-white transition-colors">Kontak</a></li>
                 </ul>
             </div>
 
             <!-- Contact Info -->
             <div>
-                <h4 class="text-white mb-6">Contact Us</h4>
+                <h4 class="text-white mb-6">Kontak Kami</h4>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
                         <i data-lucide="map-pin" class="w-5 h-5 text-[var(--color-primary-light)] flex-shrink-0 mt-1"></i>
@@ -61,7 +61,7 @@
 
         <div class="border-t border-[var(--color-neutral-800)] mt-12 pt-10 text-center">
             <p class="text-[var(--color-neutral-300)]">
-                © {{ date('Y') }} Harmony Academy. All rights reserved.
+                © {{ date('Y') }} SMP Negeri 6 Dongko. All rights reserved.
             </p>
         </div>
     </div>

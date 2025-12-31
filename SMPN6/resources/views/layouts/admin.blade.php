@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Admin Dashboard') - Harmony Academy</title>
+    <title>@yield('title', 'Admin Dashboard') - SMPN 6 Dongko</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -45,7 +45,7 @@
                         <i data-lucide="graduation-cap" class="w-6 h-6"></i>
                     </div>
                     <div>
-                        <div class="font-semibold">Harmony Academy</div>
+                        <div class="font-semibold">SMPN 6 Dongko</div>
                         <div class="text-xs text-gray-400">Admin Panel</div>
                     </div>
                 </a>

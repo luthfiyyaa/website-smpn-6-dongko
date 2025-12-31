@@ -1,3 +1,8 @@
+@php
+    use Illuminate\Support\Str;
+@endphp
+
+
 @extends('layouts.app')
 
 @section('title', 'Home - Harmony Academy')
@@ -7,23 +12,23 @@
 <!-- Hero Section -->
 <section class="relative h-[600px] bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] overflow-hidden">
     <div class="absolute inset-0 opacity-20">
-        <img src="https://images.unsplash.com/photo-1647667436195-6954ef8b27e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2NjMwMzU2OHww&ixlib=rb-4.1.0&q=80&w=1080" 
+        <img src="{{ asset('storage/assets/foto-landing.jpeg') }}" 
              alt="School Building" 
              class="w-full h-full object-cover">
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div class="max-w-2xl">
-            <h1 class="text-white mb-6">Welcome to Harmony Academy</h1>
+            <h1 class="text-white mb-6">Selamat Datang di Website SMP Negeri 6 Dongko</h1>
             <p class="text-xl text-white/90 mb-10 leading-relaxed">
-                Nurturing minds, inspiring futures. Where excellence meets opportunity in education.
+                Membina pikiran, menginspirasi masa depan. Di mana keunggulan bertemu peluang dalam pendidikan.
             </p>
             <div class="flex flex-wrap gap-4">
                 <a href="{{ route('ppdb') }}" class="bg-white text-[var(--color-primary)] px-10 py-4 rounded-lg hover:bg-[var(--color-neutral-100)] transition-colors flex items-center gap-2">
-                    Apply Now
+                    Daftar Sekarang
                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
                 <a href="{{ route('profile') }}" class="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white/10 transition-colors">
-                    Learn More
+                    Pelajari Selengkapnya
                 </a>
             </div>
         </div>
@@ -61,24 +66,28 @@
     <div class="bg-white rounded-2xl shadow-md overflow-hidden">
         <div class="grid md:grid-cols-2 gap-0 items-center">
             <div class="h-full">
-                <img src="https://images.unsplash.com/photo-1746513534315-caa52d3f462c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmluY2lwYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY2Mzc2MDk3fDA&ixlib=rb-4.1.0&q=80&w=1080" 
-                     alt="Principal" 
-                     class="w-full h-full object-cover min-h-[400px]">
+                <img 
+                    src="{{ asset('storage/assets/foto-kepsek.jpeg') }}" 
+                    alt="Principal"
+                    class="w-full h-full object-cover min-h-[400px]">
             </div>
             <div class="p-10 lg:p-12">
-                <h2 class="mb-6">Principal's Welcome</h2>
+                <h2 class="mb-6">Sambutan Kepala Sekolah</h2>
                 <p class="mb-5 leading-relaxed">
-                    Dear Students, Parents, and Visitors,
+                    Assalamu'alaikum warahmatullahi wabarakatuh
                 </p>
                 <p class="mb-5 leading-relaxed">
-                    It is my great pleasure to welcome you to Harmony Academy. For over 30 years, we have been committed to providing an exceptional educational experience that nurtures academic excellence, character development, and creative thinking.
+                    Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya, sehingga sekolah kami dapat menghadirkan situs resmi dengan domain sch.id sebagai bagian dari transformasi digital di bidang pendidikan. Kehadiran website ini merupakan bentuk komitmen kami dalam memberikan layanan informasi yang cepat, akurat, dan transparan kepada seluruh warga sekolah, orang tua, alumni, dan masyarakat umum. Website ini juga menjadi jendela utama untuk memperkenalkan profil sekolah, visi misi, program unggulan, serta capaian prestasi siswa dan guru kepada publik.
                 </p>
                 <p class="mb-5 leading-relaxed">
-                    Our dedicated faculty and staff work tirelessly to create an environment where every student can thrive and reach their full potential. We believe in educating the whole child - academically, socially, and emotionally.
+                    Melalui website ini, kami menyediakan berbagai fasilitas yang dapat dimanfaatkan secara maksimal, antara lain informasi akademik, agenda kegiatan sekolah, pengumuman penting, galeri foto dan video, hingga layanan administrasi digital seperti SPMB (Sistem Penerimaan Murid Baru) secara online. Selain itu, guru dan siswa juga dapat mengakses bahan terbuka dan media pembelajaran interaktif yang terintegrasi dengan platform digital sekolah. Kami berharap, kehadiran website ini dapat memperkuat sinergi antara sekolah dan masyarakat, serta menjadi sarana komunikasi dan kolaborasi yang produktif demi terwujudnya pendidikan yang unggul, adaptif, dan berdaya saing.
+                </p>
+                <p class="mb-5 leading-relaxed">
+                    Wassalamu'alaikum warahmatullahi wabarakatuh
                 </p>
                 <div class="mt-8 pt-6 border-t border-[var(--color-neutral-200)]">
-                    <p class="text-[var(--color-neutral-900)]">Dr. Sarah Johnson</p>
-                    <p class="text-[var(--color-neutral-700)] mt-1">Principal</p>
+                    <p class="text-[var(--color-neutral-900)]">Wardoyo, S.Kom</p>
+                    <p class="text-[var(--color-neutral-700)] mt-1">Kepala Sekolah SMP Negeri 6 Dongko</p>
                 </div>
             </div>
         </div>
@@ -86,75 +95,67 @@
 </section>
 
 <!-- Highlights Section -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
-    <div class="flex justify-between items-end mb-12">
-        <div>
-            <h2 class="mb-3">Latest Highlights</h2>
-            <p class="text-[var(--color-neutral-700)]">Stay updated with our recent news, events, and achievements</p>
-        </div>
-        <a href="{{ route('news') }}" class="hidden sm:flex items-center gap-2 text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]">
-            View All
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </a>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32"> 
+    <div class="flex justify-between items-end mb-12"> 
+        <div> 
+            <h2 class="mb-3">Berita Terbaru</h2> 
+            <p class="text-[var(--color-neutral-700)]">Tetap ikuti perkembangan berita, acara, dan pencapaian terbaru kami.</p> 
+        </div> 
+        <a href="{{ route('news') }}" class="hidden sm:flex items-center gap-2 text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"> Lainnya 
+            <i data-lucide="arrow-right" class="w-5 h-5"></i> 
+        </a> 
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1567168544450-75e8b62f1977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" 
-                 alt="Science Fair" 
-                 class="w-full h-48 object-cover">
-            <div class="p-8">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-[var(--color-primary)]/10 text-[var(--color-primary)] px-4 py-1.5 rounded-full text-sm">
-                        Achievement
-                    </span>
-                    <span class="text-sm text-[var(--color-neutral-700)] flex items-center gap-1">
-                        <i data-lucide="calendar" class="w-4 h-4"></i>
-                        Dec 15, 2024
-                    </span>
-                </div>
-                <h3 class="mb-2">Students Win National Science Fair</h3>
-            </div>
-        </div>
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1581093588401-fbb5a9fa9558?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" 
-                 alt="STEM Lab" 
-                 class="w-full h-48 object-cover">
-            <div class="p-8">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-[var(--color-primary)]/10 text-[var(--color-primary)] px-4 py-1.5 rounded-full text-sm">
-                        Facilities
-                    </span>
-                    <span class="text-sm text-[var(--color-neutral-700)] flex items-center gap-1">
-                        <i data-lucide="calendar" class="w-4 h-4"></i>
-                        Dec 10, 2024
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        @forelse ($latestNews as $news)
+            <a
+                href="{{ route('news.detail', $news->id) }}"
+                class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
+            >
+                <!-- Image -->
+                <div class="relative h-48 overflow-hidden">
+                    @if($news->image)
+                        <img src="{{ asset('storage/' . $news->image) }}" 
+                            alt="{{ $news->title }}" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-secondary)]/20">
+                                <i data-lucide="image" class="w-16 h-16 text-[var(--color-neutral-400)]"></i>
+                            </div>
+                        @endif
+
+                    <!-- Badge kategori -->
+                    <span class="absolute top-4 left-4 bg-white/90 text-[var(--color-primary)] text-xs font-medium px-3 py-1 rounded-full shadow">
+                        {{ $news->category ?? 'Academic' }}
                     </span>
                 </div>
-                <h3 class="mb-2">New STEM Lab Opens</h3>
-            </div>
-        </div>
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" 
-                 alt="Arts Festival" 
-                 class="w-full h-48 object-cover">
-            <div class="p-8">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-[var(--color-primary)]/10 text-[var(--color-primary)] px-4 py-1.5 rounded-full text-sm">
-                        Events
-                    </span>
-                    <span class="text-sm text-[var(--color-neutral-700)] flex items-center gap-1">
+
+                <!-- Content -->
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-sm text-[var(--color-neutral-600)] mb-3">
                         <i data-lucide="calendar" class="w-4 h-4"></i>
-                        Dec 5, 2024
-                    </span>
+                        {{ $news->created_at->format('M d, Y') }}
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-[var(--color-neutral-900)] mb-2 line-clamp-2">
+                        {{ $news->title }}
+                    </h3>
+
+                    <p class="text-sm text-[var(--color-neutral-700)] line-clamp-2">
+                        {{ Str::limit(strip_tags($news->content), 90) }}
+                    </p>
                 </div>
-                <h3 class="mb-2">Annual Arts Festival Success</h3>
-            </div>
-        </div>
+            </a>
+        @empty
+            <p class="col-span-3 text-center text-[var(--color-neutral-600)]">
+                Tidak ada berita.
+            </p>
+        @endforelse
     </div>
 </section>
 
 <!-- Photo Gallery -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
-    <h2 class="mb-12 text-center">Our Campus Life</h2>
+    <h2 class="mb-12 text-center">Highlights Galeri Sekolah</h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
             <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" 
@@ -179,7 +180,7 @@
     </div>
     <div class="text-center mt-10">
         <a href="{{ route('facilities') }}" class="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] inline-flex items-center gap-2">
-            Explore Our Facilities
+            Eksplor Fasilitas Kami
             <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
     </div>
@@ -188,12 +189,12 @@
 <!-- CTA Section -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] rounded-2xl p-12 lg:p-16 text-center text-white">
-        <h2 class="text-white mb-6">Ready to Join Our Community?</h2>
+        {{-- <h2 class="text-white mb-6">Ready to Join Our Community?</h2> --}}
         <p class="text-xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Discover how Harmony Academy can help your child reach their full potential. Start your admission journey today.
+            Mari bergabung dengan kami dan meningkatkan kualitas pendidikan. Segera mendaftar sekarang.
         </p>
         <a href="{{ route('ppdb') }}" class="bg-white text-[var(--color-primary)] px-10 py-4 rounded-lg hover:bg-[var(--color-neutral-100)] transition-colors inline-flex items-center gap-2">
-            Start Application
+            Mulai Mendaftar
             <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
     </div>
