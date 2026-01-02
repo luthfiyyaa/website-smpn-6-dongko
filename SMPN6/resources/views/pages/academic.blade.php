@@ -1,21 +1,21 @@
 @extends('layouts.app')
 
-@section('title', 'Academics - Harmony Academy')
-@section('description', 'Explore our comprehensive academic programs, curriculum, and extracurricular activities')
+@section('title', 'Akademik - SMPN 6 Dongko')
+@section('description', 'Jelajahi program akademik, kurikulum, dan kegiatan ekstrakurikuler kami yang komprehensif.')
 
 @section('content')
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <!-- Page Header -->
     <div class="text-center mb-20">
-        <h1 class="mb-6">Academics</h1>
+        <h1 class="mb-6">Akademik</h1>
         <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive academic programs are designed to challenge, inspire, and prepare students for success in a rapidly changing world.
+            Program akademik komprehensif kami dirancang untuk menantang, menginspirasi, dan mempersiapkan siswa untuk sukses di dunia yang berubah dengan cepat.
         </p>
     </div>
 
     <!-- Curriculum Section -->
     <section class="mb-32">
-        <h2 class="text-center mb-16">Our Curriculum</h2>
+        <h2 class="text-center mb-16">Kurikulum yang Kami Gunakan</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
                 <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-8 text-white">

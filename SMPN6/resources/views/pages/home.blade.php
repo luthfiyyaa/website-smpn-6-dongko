@@ -5,8 +5,8 @@
 
 @extends('layouts.app')
 
-@section('title', 'Home - Harmony Academy')
-@section('description', 'Welcome to Harmony Academy - Nurturing minds, inspiring futures through quality education')
+@section('title', 'Beranda - SMPN 6 Dongko')
+@section('description', 'Selamat datang di Website SMP Negeri 6 Dongko')
 
 @section('content')
 <!-- Hero Section -->
@@ -157,30 +157,22 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
     <h2 class="mb-12 text-center">Highlights Galeri Sekolah</h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" 
-                 alt="Gallery 1" 
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-        <div class="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" 
-                 alt="Gallery 2" 
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-        <div class="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" 
-                 alt="Gallery 3" 
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-        <div class="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" 
-                 alt="Gallery 4" 
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
+        @forelse ($galleries as $gallery)
+            <div class="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <img 
+                    src="{{ asset('storage/' . $gallery->image) }}" 
+                    alt="{{ $gallery->title }}"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+        @empty
+            <p class="col-span-full text-center text-[var(--color-neutral-600)]">
+                Belum ada galeri yang ditampilkan
+            </p>
+        @endforelse
     </div>
     <div class="text-center mt-10">
         <a href="{{ route('facilities') }}" class="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] inline-flex items-center gap-2">
-            Eksplor Fasilitas Kami
+            Lihat Fasilitas Kami
             <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
     </div>
