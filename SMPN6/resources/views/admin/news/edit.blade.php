@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit News')
+@section('title', 'Edit Berita')
 
 @section('content')
 <div class="mb-8">
@@ -9,9 +9,9 @@
            class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
             <i data-lucide="arrow-left" class="w-5 h-5"></i>
         </a>
-        <h1>Edit News Article</h1>
+        <h1>Edit Berita</h1>
     </div>
-    <p class="text-[var(--color-neutral-700)]">Update the article details</p>
+    <p class="text-[var(--color-neutral-700)]">Update detail berita</p>
 </div>
 
 @if ($errors->any())
@@ -38,7 +38,7 @@
             <!-- Title -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="title" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Article Title <span class="text-red-500">*</span>
+                    Judul Berita <span class="text-red-500">*</span>
                 </label>
                 <input 
                     type="text" 
@@ -47,7 +47,7 @@
                     value="{{ old('title', $news->title) }}"
                     required
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Enter article title">
+                    placeholder="Masukkan judul">
             </div>
 
             <!-- Excerpt -->
@@ -68,7 +68,7 @@
             <!-- Content -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="content" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Full Content <span class="text-red-500">*</span>
+                    Isi Berita <span class="text-red-500">*</span>
                 </label>
                 <textarea 
                     name="content" 
@@ -76,19 +76,18 @@
                     rows="15"
                     required
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Write the full article content here...">{{ old('content', $news->content) }}</textarea>
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Write the complete article content</p>
+                    placeholder="Tulis berita di sini">{{ old('content', $news->content) }}</textarea>
             </div>
 
             <!-- Featured Image -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="image" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Featured Image
+                    Gambar
                 </label>
                 
                 @if($news->image)
                     <div class="mb-4">
-                        <p class="text-sm text-[var(--color-neutral-700)] mb-2">Current Image:</p>
+                        <p class="text-sm text-[var(--color-neutral-700)] mb-2">Gambar saat ini:</p>
                         <img src="{{ asset('storage/' . $news->image) }}" 
                              alt="{{ $news->title }}"
                              class="w-full max-w-md rounded-lg shadow-md mb-2"
@@ -100,7 +99,7 @@
                                 value="1"
                                 class="w-4 h-4 text-red-600 border-[var(--color-neutral-300)] rounded focus:ring-2 focus:ring-red-500"
                                 onchange="toggleImageRemoval(this)">
-                            <span>Remove current image</span>
+                            <span>Hapus gambar</span>
                         </label>
                     </div>
                 @endif
@@ -113,12 +112,12 @@
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                     onchange="previewImage(event)">
                 <p class="text-sm text-[var(--color-neutral-700)] mt-2">
-                    {{ $news->image ? 'Upload a new image to replace the current one' : 'Recommended: 1200x630px, JPG or PNG, max 2MB' }}
+                    {{ $news->image ? 'Upload gambar baru' : 'Recommended: 1200x630px, JPG or PNG, max 2MB' }}
                 </p>
                 
                 <!-- Image Preview -->
                 <div id="imagePreview" class="mt-4 hidden">
-                    <p class="text-sm text-[var(--color-neutral-700)] mb-2">New Preview:</p>
+                    <p class="text-sm text-[var(--color-neutral-700)] mb-2">Preview:</p>
                     <img id="preview" class="w-full max-w-md rounded-lg shadow-md" alt="Preview">
                 </div>
             </div>
@@ -128,7 +127,7 @@
         <div class="space-y-6">
             <!-- Publishing Options -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Publishing Options</h3>
+                <h3 class="mb-4">Publish Options</h3>
                 
                 <!-- Status -->
                 <div class="mb-4">
@@ -147,7 +146,7 @@
                 <!-- Publish Date -->
                 <div>
                     <label for="published_at" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                        Publish Date
+                        Tanggal Publish 
                     </label>
                     <input 
                         type="datetime-local" 
@@ -161,9 +160,9 @@
 
             <!-- Category -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Category</h3>
+                <h3 class="mb-4">Kategori</h3>
                 <label for="category" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Select Category <span class="text-red-500">*</span>
+                    Pilih Kategori <span class="text-red-500">*</span>
                 </label>
                 <select 
                     name="category" 
@@ -171,27 +170,27 @@
                     required
                     class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
                     <option value="">Choose a category</option>
-                    <option value="Academic" {{ old('category', $news->category) == 'Academic' ? 'selected' : '' }}>Academic</option>
-                    <option value="Event" {{ old('category', $news->category) == 'Event' ? 'selected' : '' }}>Event</option>
-                    <option value="Achievement" {{ old('category', $news->category) == 'Achievement' ? 'selected' : '' }}>Achievement</option>
-                    <option value="Announcement" {{ old('category', $news->category) == 'Announcement' ? 'selected' : '' }}>Announcement</option>
+                    <option value="Akademik" {{ old('category', $news->category) == 'Akademik' ? 'selected' : '' }}>Akademik</option>
+                    <option value="Acara" {{ old('category', $news->category) == 'Acara' ? 'selected' : '' }}>Acara</option>
+                    <option value="Penghargaan" {{ old('category', $news->category) == 'Penghargaan' ? 'selected' : '' }}>Penghargaan</option>
+                    <option value="Pengumuman" {{ old('category', $news->category) == 'Pengumuman' ? 'selected' : '' }}>Pengumuman</option>
                 </select>
             </div>
 
             <!-- Meta Information -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Information</h3>
+                <h3 class="mb-4">Informasi</h3>
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between">
-                        <span class="text-[var(--color-neutral-700)]">Created:</span>
+                        <span class="text-[var(--color-neutral-700)]">Dibuat:</span>
                         <span class="text-[var(--color-neutral-900)]">{{ $news->created_at->format('M d, Y H:i') }}</span>
                     </div>
                     <div class="flex justify-between">
-                        <span class="text-[var(--color-neutral-700)]">Updated:</span>
+                        <span class="text-[var(--color-neutral-700)]">Diperbarui:</span>
                         <span class="text-[var(--color-neutral-900)]">{{ $news->updated_at->format('M d, Y H:i') }}</span>
                     </div>
                     <div class="flex justify-between">
-                        <span class="text-[var(--color-neutral-700)]">Author:</span>
+                        <span class="text-[var(--color-neutral-700)]">Penulis:</span>
                         <span class="text-[var(--color-neutral-900)]">{{ $news->author ? $news->author->name : 'N/A' }}</span>
                     </div>
                 </div>
@@ -203,7 +202,7 @@
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-2 mb-3">
                     <i data-lucide="save" class="w-5 h-5"></i>
-                    <span>Update Article</span>
+                    <span>Update Berita</span>
                 </button>
                 <a 
                     href="{{ route('admin.news.index') }}"
@@ -216,7 +215,7 @@
                     target="_blank"
                     class="w-full bg-blue-100 text-blue-700 py-3 rounded-lg hover:bg-blue-200 transition-colors flex items-center justify-center gap-2">
                     <i data-lucide="external-link" class="w-5 h-5"></i>
-                    <span>View Public Page</span>
+                    <span>Lihat Halaman</span>
                 </a>
             </div>
         </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Student Admissions (PPDB) - Harmony Academy')
+@section('title', 'PPDB - SMPN 6 Dongko')
 
 @section('content')
 <!-- Hero Section -->
@@ -9,12 +9,12 @@
         <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
             <span class="flex items-center gap-2">
                 <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-                Admissions 2024/2025
+                PPDB 2026/2027
             </span>
         </div>
-        <h1 class="text-white mb-6">Student Admissions</h1>
+        <h1 class="text-white mb-6">Pendaftaran Siswa</h1>
         <p class="text-xl text-white/90 max-w-3xl mx-auto">
-            Join Harmony Academy and embark on an exceptional educational journey
+            Mari bergabung dengan SMPN 6 Dongko dan mulailah perjalanan pendidikan yang luar biasa.
         </p>
     </div>
 </section>
@@ -27,7 +27,7 @@
                 <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <i data-lucide="check-circle" class="w-10 h-10 text-green-600"></i>
                 </div>
-                <h3 class="text-green-900 mb-4">Application Submitted Successfully!</h3>
+                <h3 class="text-green-900 mb-4">Pendaftaran berhasil!</h3>
                 <p class="text-green-700 text-lg">
                     {{ session('success') }}
                 </p>
@@ -43,12 +43,11 @@
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
                     <i data-lucide="list-checks" class="w-5 h-5"></i>
-                    Application Process
+                    Tata Cara Pendaftaran
                 </span>
             </div>
-            <h2 class="mb-6">How to Apply</h2>
             <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
-                Follow these simple steps to complete your application
+                Ikuti langkah berikut untuk melengkapi pendaftaran
             </p>
         </div>
 

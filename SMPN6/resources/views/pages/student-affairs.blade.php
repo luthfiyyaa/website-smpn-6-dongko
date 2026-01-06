@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Student Affairs - Harmony Academy')
+@section('title', 'Kesiswaan - SMPN 6 Dongko')
 
 @section('content')
 <!-- Hero Section -->
@@ -26,10 +26,10 @@
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
                     <i data-lucide="award" class="w-5 h-5"></i>
-                    Achievements
+                    Penghargaan
                 </span>
             </div>
-            <h2 class="mb-6">Student Achievements</h2>
+            <h2 class="mb-6">Kejuaraan Siswa</h2>
             <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
                 Celebrating excellence and success across academics, sports, and arts
             </p>

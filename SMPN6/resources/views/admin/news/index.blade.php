@@ -1,17 +1,17 @@
 @extends('layouts.admin')
 
-@section('title', 'Manage News')
+@section('title', 'Kelola Berita')
 
 @section('content')
 <div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
     <div>
-        <h1 class="mb-2">News Management</h1>
-        <p class="text-[var(--color-neutral-700)]">Create and manage school news articles</p>
+        <h1 class="mb-2">Pengelolaan Berita</h1>
+        <p class="text-[var(--color-neutral-700)]">Buat dan Kelola Berita Sekolah</p>
     </div>
     <a href="{{ route('admin.news.create') }}" 
        class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors inline-flex items-center justify-center gap-2">
         <i data-lucide="plus" class="w-5 h-5"></i>
-        <span>Create News</span>
+        <span>Buat Berita</span>
     </a>
 </div>
 
@@ -46,11 +46,11 @@
             <select 
                 name="category"
                 class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <option value="">All Categories</option>
-                <option value="Academic" {{ request('category') == 'Academic' ? 'selected' : '' }}>Academic</option>
-                <option value="Event" {{ request('category') == 'Event' ? 'selected' : '' }}>Event</option>
-                <option value="Achievement" {{ request('category') == 'Achievement' ? 'selected' : '' }}>Achievement</option>
-                <option value="Announcement" {{ request('category') == 'Announcement' ? 'selected' : '' }}>Announcement</option>
+                <option value="">Semua Kategori</option>
+                <option value="Akademik" {{ request('category') == 'Akademik' ? 'selected' : '' }}>Akademik</option>
+                <option value="Acara" {{ request('category') == 'Acara' ? 'selected' : '' }}>Acara</option>
+                <option value="Penghargaan" {{ request('category') == 'Penghargaan' ? 'selected' : '' }}>Penghargaan</option>
+                <option value="Pengumuman" {{ request('category') == 'Pengumuman' ? 'selected' : '' }}>Pengumuman</option>
             </select>
         </div>
         <div>
@@ -58,8 +58,8 @@
             <select 
                 name="is_published"
                 class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                <option value="">All Status</option>
-                <option value="1" {{ request('is_published') == '1' ? 'selected' : '' }}>Published</option>
+                <option value="">Semua Status</option>
+                <option value="1" {{ request('is_published') == '1' ? 'selected' : '' }}>Diunggah</option>
                 <option value="0" {{ request('is_published') == '0' ? 'selected' : '' }}>Draft</option>
             </select>
         </div>
@@ -85,13 +85,13 @@
             <table class="w-full">
                 <thead class="bg-[var(--color-neutral-50)] border-b border-[var(--color-neutral-200)]">
                     <tr>
-                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Image</th>
-                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Title</th>
-                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Category</th>
-                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Author</th>
+                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Gambar</th>
+                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Judul</th>
+                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Kategori</th>
+                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Penulis</th>
                         <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Status</th>
-                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Date</th>
-                        <th class="px-6 py-4 text-center text-sm text-[var(--color-neutral-700)]">Actions</th>
+                        <th class="px-6 py-4 text-left text-sm text-[var(--color-neutral-700)]">Tanggal</th>
+                        <th class="px-6 py-4 text-center text-sm text-[var(--color-neutral-700)]">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-[var(--color-neutral-200)]">
@@ -126,7 +126,7 @@
                                 @if($item->is_published)
                                     <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-green-100 text-green-700">
                                         <i data-lucide="check-circle" class="w-3 h-3"></i>
-                                        Published
+                                        Diunggah
                                     </span>
                                 @else
                                     <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-yellow-100 text-yellow-700">
@@ -143,7 +143,7 @@
                                     <a href="{{ route('news.detail', $item->id) }}" 
                                        target="_blank"
                                        class="text-blue-600 hover:text-blue-700 p-2 hover:bg-blue-50 rounded-lg transition-colors"
-                                       title="View">
+                                       title="Lihat">
                                         <i data-lucide="eye" class="w-4 h-4"></i>
                                     </a>
                                     <a href="{{ route('admin.news.edit', $item->id) }}" 
@@ -182,14 +182,14 @@
             <div class="bg-[var(--color-neutral-100)] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <i data-lucide="newspaper" class="w-10 h-10 text-[var(--color-neutral-400)]"></i>
             </div>
-            <h3 class="mb-2 text-[var(--color-neutral-900)]">No News Articles</h3>
+            <h3 class="mb-2 text-[var(--color-neutral-900)]">Tidak ada berita</h3>
             <p class="text-[var(--color-neutral-700)] mb-6">
-                Get started by creating your first news article
+                Mulai dengan berita pertama Anda
             </p>
             <a href="{{ route('admin.news.create') }}" 
                class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
                 <i data-lucide="plus" class="w-5 h-5"></i>
-                <span>Create News</span>
+                <span>Buat Berita</span>
             </a>
         </div>
     @endif

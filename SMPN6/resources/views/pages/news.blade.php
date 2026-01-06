@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'School News - Harmony Academy')
+@section('title', 'Berita Sekolah - SMPN 6 Dongko')
 
 @section('content')
 <!-- Hero Section -->
@@ -9,12 +9,12 @@
         <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
             <span class="flex items-center gap-2">
                 <i data-lucide="newspaper" class="w-5 h-5"></i>
-                Latest Updates
+                Unggahan Terbaru
             </span>
         </div>
-        <h1 class="text-white mb-6">School News</h1>
+        <h1 class="text-white mb-6">Berita Sekolah</h1>
         <p class="text-xl text-white/90 max-w-3xl mx-auto">
-            Stay informed with the latest news, events, and announcements from Harmony Academy
+            Tetap mendapatkan informasi dari berita, acara, dan pengumuman terbaru SMP Negeri 6 Dongko
         </p>
     </div>
 </section>
@@ -71,7 +71,7 @@
 
                             <a href="{{ route('news.detail', $news->id) }}" 
                                class="inline-flex items-center gap-2 text-[var(--color-primary)] hover:gap-3 transition-all">
-                                <span>Read More</span>
+                                <span>Baca Selengkapnya</span>
                                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
                         </div>
@@ -89,14 +89,14 @@
                 <div class="bg-[var(--color-neutral-100)] w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
                     <i data-lucide="newspaper" class="w-12 h-12 text-[var(--color-neutral-400)]"></i>
                 </div>
-                <h3 class="mb-4 text-[var(--color-neutral-900)]">No News Available</h3>
+                <h3 class="mb-4 text-[var(--color-neutral-900)]">Tidak ada berita yang tersedia</h3>
                 <p class="text-[var(--color-neutral-700)] mb-8">
-                    Check back soon for the latest updates and announcements.
+                    Kunjungi kembali nanti untuk berita dan pengumuman terbaru kami.
                 </p>
                 <a href="{{ route('home') }}" 
                    class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-8 py-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors">
                     <i data-lucide="arrow-left" class="w-5 h-5"></i>
-                    <span>Back to Home</span>
+                    <span>Kembali ke Beranda</span>
                 </a>
             </div>
         @endif
@@ -110,20 +110,20 @@
             <div class="bg-[var(--color-primary)]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <i data-lucide="bell" class="w-10 h-10 text-[var(--color-primary)]"></i>
             </div>
-            <h2 class="mb-4">Stay Updated</h2>
+            <h2 class="mb-4">Tetap Bergabung</h2>
             <p class="text-xl text-[var(--color-neutral-700)] mb-8">
-                Subscribe to receive the latest news and announcements directly to your inbox
+                Ikuti kami untuk mendapatkan berita dan pengumuman terbaru ke Email Anda.
             </p>
             <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
                 <input 
                     type="email" 
-                    placeholder="Enter your email address"
+                    placeholder="Masukkan Email Anda"
                     class="flex-1 px-6 py-4 border border-[var(--color-neutral-300)] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                     required>
                 <button 
                     type="submit"
                     class="bg-[var(--color-primary)] text-white px-10 py-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors whitespace-nowrap">
-                    Subscribe
+                    Ikuti
                 </button>
             </form>
         </div>

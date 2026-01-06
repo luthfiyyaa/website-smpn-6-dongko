@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', $news->title . ' - Harmony Academy')
+@section('title', $news->title . ' - SMPN 6 Dongko')
 
 @section('content')
 <!-- Breadcrumb -->
 <section class="bg-[var(--color-neutral-50)] py-6">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav class="flex items-center gap-2 text-sm text-[var(--color-neutral-700)]">
-            <a href="{{ route('home') }}" class="hover:text-[var(--color-primary)] transition-colors">Home</a>
+            <a href="{{ route('home') }}" class="hover:text-[var(--color-primary)] transition-colors">Beranda</a>
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
-            <a href="{{ route('news') }}" class="hover:text-[var(--color-primary)] transition-colors">News</a>
+            <a href="{{ route('news') }}" class="hover:text-[var(--color-primary)] transition-colors">Berita</a>
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
-            <span class="text-[var(--color-neutral-900)]">Article</span>
+            <span class="text-[var(--color-neutral-900)]">Artikel</span>
         </nav>
     </div>
 </section>
@@ -81,7 +81,7 @@
 
         <!-- Share Buttons -->
         <div class="mt-12 pt-8 border-t border-[var(--color-neutral-200)]">
-            <p class="text-sm text-[var(--color-neutral-700)] mb-4">Share this article:</p>
+            <p class="text-sm text-[var(--color-neutral-700)] mb-4">Bagikan artikel ini:</p>
             <div class="flex gap-3">
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('news.detail', $news->id)) }}" 
                    target="_blank"
@@ -112,7 +112,7 @@
 @if($relatedNews->count() > 0)
     <section class="py-16 bg-[var(--color-neutral-50)]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="mb-10">Related Articles</h2>
+            <h2 class="mb-10">Artikel Terkait</h2>
             
             <div class="grid md:grid-cols-2 gap-8">
                 @foreach($relatedNews as $related)
@@ -156,7 +156,7 @@
 
                             <a href="{{ route('news.detail', $related->id) }}" 
                                class="inline-flex items-center gap-2 text-[var(--color-primary)] hover:gap-3 transition-all">
-                                <span>Read More</span>
+                                <span>Baca Selengkapnya</span>
                                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </a>
                         </div>
@@ -173,7 +173,7 @@
         <a href="{{ route('news') }}" 
            class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-10 py-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors">
             <i data-lucide="arrow-left" class="w-5 h-5"></i>
-            <span>Back to All News</span>
+            <span>Kembali ke Halaman Berita</span>
         </a>
     </div>
 </section>
