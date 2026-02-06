@@ -96,18 +96,6 @@
                 <p class="text-xs text-center text-gray-500 mt-2">Tahun 2023</p>
             </div>
         </div>
-
-        <!-- Quote Section -->
-        <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border-l-4 border-blue-600">
-            <div class="flex items-start gap-4">
-                <i class="fas fa-quote-left text-3xl text-blue-600 mt-2"></i>
-                <div>
-                    <p class="text-gray-700 text-lg italic mb-4">
-                        Prestasi-prestasi ini mencerminkan dedikasi dari seluruh warga sekolah mulai dari siswa, guru, hingga tenaga kependidikan dalam menciptakan lingkungan belajar yang unggul, berkarakter, dan berdaya saing.
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 

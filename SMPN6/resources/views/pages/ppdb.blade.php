@@ -8,7 +8,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
             <span class="flex items-center gap-2">
-                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                <i class="fa-solid fa-graduation-cap"></i>
                 PPDB 2026/2027
             </span>
         </div>
@@ -19,80 +19,30 @@
     </div>
 </section>
 
-<!-- Admission Steps -->
+<!-- Highlight PPDB -->
 <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i data-lucide="list-checks" class="w-5 h-5"></i>
-                    Tata Cara Pendaftaran
-                </span>
-            </div>
-            <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
-                Ikuti langkah berikut untuk melengkapi pendaftaran
-            </p>
-        </div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8">
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Step 1 -->
-            <div class="relative">
-                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-md text-center h-full">
-                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        1
-                    </div>
-                    <h3 class="mb-4">Isi Formulir</h3>
-                    <p class="text-[var(--color-neutral-700)]">
-                        Lengkapi formulir pendaftaran online dengan informasi yang akurat
-                    </p>
-                </div>
-                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <i data-lucide="chevron-right" class="w-8 h-8 text-[var(--color-primary)]/30"></i>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="relative">
-                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-md text-center h-full">
-                    <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        2
-                    </div>
-                    <h3 class="mb-4">Kirim Dokumen</h3>
-                    <p class="text-[var(--color-neutral-700)]">
-                        Upload dokumen yang diperlukan dan rekam akademik
-                    </p>
-                </div>
-                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <i data-lucide="chevron-right" class="w-8 h-8 text-[var(--color-primary)]/30"></i>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="relative">
-                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-md text-center h-full">
-                    <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        3
-                    </div>
-                    <h3 class="mb-4">Tes & Wawancara</h3>
-                    <p class="text-[var(--color-neutral-700)]">
-                        Ikuti tes masuk dan sesi wawancara
-                    </p>
-                </div>
-                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <i data-lucide="chevron-right" class="w-8 h-8 text-[var(--color-primary)]/30"></i>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-md text-center h-full">
-                <div class="bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                    4
-                </div>
-                <h3 class="mb-4">Daftar Ulang</h3>
-                <p class="text-[var(--color-neutral-700)]">
-                    Terima surat penerimaan dan lengkapi daftar ulang
+            <!-- Gratis Pendaftaran -->
+            <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-10 text-center shadow-lg">
+                <i class="fa-solid fa-circle-check text-5xl mb-4"></i>
+                <h2 class="mb-3">BEBAS BIAYA PENDAFTARAN</h2>
+                <p class="text-lg text-white/90">
+                    Tidak dipungut biaya apapun selama proses PPDB
                 </p>
             </div>
+
+            <!-- Gratis Seragam -->
+            <div class="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-2xl p-10 text-center shadow-lg">
+                <i class="fa-solid fa-shirt text-5xl mb-4"></i>
+                <h2 class="mb-3">GRATIS 3 STEL SERAGAM</h2>
+                <p class="text-lg text-white/90">
+                    Untuk <strong>25 pendaftar pertama</strong><br>
+                    (Putih Biru, Olahraga, dan Adat)
+                </p>
+            </div>
+
         </div>
     </div>
 </section>
@@ -103,7 +53,7 @@
         <div class="text-center mb-16">
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-file"></i>
                     Persyaratan
                 </span>
             </div>
@@ -115,77 +65,89 @@
             <div class="bg-white rounded-2xl p-8 shadow-md">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <i data-lucide="folder" class="w-7 h-7 text-blue-600"></i>
+                        <i class="fa-regular fa-folder text-blue-600"></i>
                     </div>
                     <h3>Dokumen yang Diperlukan</h3>
                 </div>
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Akta kelahiran (asli dan fotokopi)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Rapor sekolah sebelumnya (2 tahun terakhir)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Fotokopi Kartu Keluarga (KK)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Fotokopi KTP orang tua</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Pas foto terbaru ukuran 3x4 cm (4 lembar)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Surat keterangan sehat dari dokter</span>
-                    </li>
-                </ul>
+                <ul class="grid md:grid-cols-2 gap-6">
+
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Lulus SD / MI sederajat</span>
+                </li>
+
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Mengisi formulir pendaftaran</span>
+                </li>
+
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Pendaftaran online / offline</span>
+                </li>
+
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Fotokopi Akta Kelahiran</span>
+                </li>
+
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Fotokopi Kartu Keluarga (KK) dan KTP orang tua / wali</span>
+                </li>
+
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Pas Foto 3×4 (2 lembar)</span>
+                </li>
+
+                <li class="flex gap-4 md:col-span-2">
+                    <i class="fa-solid fa-circle-check text-green-600 mt-1"></i>
+                    <span>Fotokopi KIP / KPKH / KPS / KKS (jika ada)</span>
+                </li>
+
+            </ul>
             </div>
 
             <!-- Important Information -->
             <div class="bg-white rounded-2xl p-8 shadow-md">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="bg-green-100 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <i data-lucide="info" class="w-7 h-7 text-green-600"></i>
+                        <i class="fa-solid fa-info text-green-600"></i>
                     </div>
                     <h3>Jadwal Penting</h3>
                 </div>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
-                        <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                        <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Periode Pendaftaran</div>
                             <div class="text-sm text-[var(--color-neutral-700)]">15 Januari - 31 Maret 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                        <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Tes Masuk</div>
                             <div class="text-sm text-[var(--color-neutral-700)]">10-20 April 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                        <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Pengumuman Hasil</div>
                             <div class="text-sm text-[var(--color-neutral-700)]">1 Mei 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                        <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Daftar Ulang</div>
                             <div class="text-sm text-[var(--color-neutral-700)]">5-15 Mei 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                        <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Tahun Ajaran Dimulai</div>
                             <div class="text-sm text-[var(--color-neutral-700)]">15 Juli 2026</div>
@@ -203,7 +165,7 @@
         <div class="text-center mb-12">
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i data-lucide="file-edit" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-file"></i>
                     Pendaftaran Online
                 </span>
             </div>
@@ -234,11 +196,11 @@
                 Atau buka formulir di tab baru untuk pengalaman yang lebih baik
             </p>
             <a 
-                href="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc9305pfZNnj2VhUqCC4RdsBghCB6RanaANcpnvHBICalkoMw/viewform?embedded=true" 
                 target="_blank"
                 class="inline-flex items-center gap-3 bg-[var(--color-primary)] text-white px-8 py-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors">
                 <span>Buka Formulir di Tab Baru</span>
-                <i data-lucide="external-link" class="w-5 h-5"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
         </div>
     </div>
@@ -248,36 +210,45 @@
 <section class="py-16 bg-[var(--color-neutral-50)]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white rounded-2xl p-10">
-            <div class="text-center mb-8">
-                <h2 class="text-white mb-4">Butuh Bantuan?</h2>
+
+            <div class="text-center mb-10">
+                <h2 class="text-white mb-3">Informasi Lebih Lanjut</h2>
                 <p class="text-white/90 text-lg">
-                    Tim penerimaan siswa baru kami siap membantu Anda dengan pertanyaan apapun
+                    Hubungi kami melalui kontak berikut
                 </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="text-center">
+
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div>
                     <div class="bg-white/20 backdrop-blur-sm w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="phone" class="w-7 h-7"></i>
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </div>
-                    <div class="text-sm text-white/80 mb-2">Telepon</div>
-                    <div class="text-white">+62 21 1234 5678</div>
+                    <div class="text-sm text-white/80 mb-1">Candra S</div>
+                    <a href="https://wa.me/6282334945603" class="text-lg font-semibold">
+                        0823 3494 5603
+                    </a>
                 </div>
-                <div class="text-center">
+                <div>
                     <div class="bg-white/20 backdrop-blur-sm w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="mail" class="w-7 h-7"></i>
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </div>
-                    <div class="text-sm text-white/80 mb-2">Email</div>
-                    <div class="text-white">ppdb@smpn6dongko.sch.id</div>
+                    <div class="text-sm text-white/80 mb-1">Sunartun</div>
+                    <a href="https://wa.me/6282228298868" class="text-lg font-semibold">
+                        0822 2829 8868
+                    </a>
                 </div>
-                <div class="text-center">
+                <div>
                     <div class="bg-white/20 backdrop-blur-sm w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="clock" class="w-7 h-7"></i>
+                        <i class="fa-solid fa-envelope text-2xl"></i>
                     </div>
-                    <div class="text-sm text-white/80 mb-2">Jam Kerja</div>
-                    <div class="text-white">Senin-Jumat: 08:00 - 16:00</div>
+                    <div class="text-sm text-white/80 mb-1">Email</div>
+                    <div class="text-lg font-semibold break-all">
+                        smpnsatapdongko@gmail.com
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 @endsection

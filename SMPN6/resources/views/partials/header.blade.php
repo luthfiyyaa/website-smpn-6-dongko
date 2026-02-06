@@ -53,14 +53,14 @@
                 @auth
                     @if(auth()->user()->role === 'admin')
                         <a href="{{ route('admin.dashboard') }}" 
-                           class="bg-[var(--color-secondary)] text-white px-5 py-2 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center gap-2">
+                           class="bg-[var(--color-secondary)] text-white px-5 py-2 rounded-lg hover:bg-[var(--color-secondary-dark)] transition-colors flex items-center gap-2">
                             <i class="fa-solid fa-gauge"></i>
                             Dashboard
                         </a>
                     @endif
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
-                        <button type="submit" class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
+                        <button type="submit" class="bg-red-100 hover:bg-red-200 text-red-600 transition-colors flex items-center gap-2 px-4 py-2 rounded-lg">
                             <i class="fa-solid fa-right-from-bracket"></i>
                             Logout
                         </button>
@@ -84,44 +84,44 @@
         <nav id="mobile-menu" class="hidden lg:hidden pb-6 space-y-2">
             <a href="{{ route('home') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('home') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                Home
+                Beranda
             </a>
             <a href="{{ route('profile') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('profile') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                School Profile
+                Profil
             </a>
             <a href="{{ route('academics') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('academics') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                Academics
+                Akademik
             </a>
             <a href="{{ route('student-affairs') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('student-affairs') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                Student Affairs
+                Kesiswaan
             </a>
             <a href="{{ route('news') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('news*') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                News
+                Berita
             </a>
             <a href="{{ route('facilities') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('facilities') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                Facilities
+                Fasilitas
             </a>
             <a href="{{ route('ppdb') }}" 
                class="block w-full text-left px-5 py-3 rounded-lg transition-colors {{ Request::routeIs('ppdb') ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]' }}">
-                Admissions
+                PPDB
             </a>
 
             <!-- Mobile Auth Buttons -->
             @auth
                 @if(auth()->user()->role === 'admin')
                     <a href="{{ route('admin.dashboard') }}" 
-                       class="block w-full text-left px-5 py-3 rounded-lg bg-[var(--color-primary)] text-white">
+                       class="block w-full px-5 py-3 rounded-lg bg-[var(--color-secondary)] text-white hover:bg-[var(--color-secondary-dark)] transition-colors flex items-center gap-2">
                         Dashboard
                     </a>
                 @endif
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="block w-full text-left px-5 py-3 rounded-lg text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]">
+                    <button type="submit" class="block w-full px-5 py-3 rounded-lg bg-red-100 hover:bg-red-200 text-red-600 transition-colors flex items-center gap-2">
                         Logout
                     </button>
                 </form>

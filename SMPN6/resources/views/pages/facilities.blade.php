@@ -111,7 +111,6 @@
                 </div>
             </div>
 
-            <!-- Facility 8: Auditorium -->
             <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
                 <div class="h-80 md:h-96 overflow-hidden">
                     <img src="{{ asset('storage/facilities/kamar-mandi.png') }}" 
@@ -133,12 +132,11 @@
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
                     <i class="fa-regular fa-images text-sm"></i>
-                    Photo Gallery
+                    Galeri Foto Sekolah
                 </span>
             </div>
-            <h2 class="mb-6">Campus Photos</h2>
             <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
-                Take a virtual tour of our beautiful campus facilities
+                Mari melihat galeri foto sekolah kami
             </p>
         </div>
 
