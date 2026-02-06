@@ -8,10 +8,10 @@
         <div class="bg-white rounded-2xl shadow-xl p-10">
             <div class="text-center mb-10">
                 <div class="bg-[var(--color-primary)] p-4 rounded-xl inline-block mb-6">
-                    <i data-lucide="graduation-cap" class="w-12 h-12 text-white"></i>
+                    <i class="fa-solid fa-graduation-cap text-white"></i>
                 </div>
-                <h2 class="mb-3">Welcome Back</h2>
-                <p class="text-[var(--color-neutral-700)]">Login to your account</p>
+                <h2 class="mb-3">Selamat Datang Kembali!</h2>
+                <p class="text-[var(--color-neutral-700)]">Masuk ke Akun Anda</p>
             </div>
 
             @if ($errors->any())
@@ -28,7 +28,7 @@
                 @csrf
 
                 <div>
-                    <label for="email" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Email Address</label>
+                    <label for="email" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Email</label>
                     <input 
                         type="email" 
                         name="email" 
@@ -65,14 +65,14 @@
                 <button 
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-4 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
-                    Sign In
+                    Masuk
                 </button>
             </form>
 
             <div class="mt-8 text-center">
                 <p class="text-sm text-[var(--color-neutral-700)]">
-                    Don't have an account? 
-                    <a href="{{ route('register') }}" class="text-[var(--color-primary)] hover:underline">Register here</a>
+                    Belum memiliki akun?
+                    <a href="{{ route('register') }}" class="text-[var(--color-primary)] hover:underline">Daftar di sini</a>
                 </p>
             </div>
         </div>

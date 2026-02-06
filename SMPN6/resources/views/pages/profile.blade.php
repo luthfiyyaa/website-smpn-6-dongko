@@ -4,22 +4,30 @@
 @section('description', 'Learn about Harmony Academy history, mission, vision, and organizational structure')
 
 @section('content')
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Page Header -->
-    <div class="text-center mb-14">
-        <h1 class="mb-6">Profil Sekolah</h1>
-        <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto leading-relaxed">
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
+            <span class="flex items-center gap-2 text-white">
+                <i class="fas fa-users"></i>
+                Profil Sekolah
+            </span>
+        </div>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl font-bold">Profil</h1>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Pelajari tentang sejarah kami yang kaya, misi, visi, dan tim berdedikasi.
         </p>
     </div>
+</section>
 
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Vision and Mission -->
     <section class="mb-24">
         <div class="grid md:grid-cols-2 gap-10">
             <!-- Visi -->
             <div class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-2xl p-10 text-white">
                 <div class="bg-white/20 w-16 h-16 rounded-xl flex items-center justify-center mb-8">
-                    <i data-lucide="eye" class="w-8 h-8"></i>
+                    <i class="fa-solid fa-eye text-2xl"></i>
                 </div>
                 <h2 class="text-white mb-6">Visi Sekolah</h2>
                 <p class="text-white/90 leading-relaxed text-justify">
@@ -31,7 +39,7 @@
             <!-- Misi -->
             <div class="bg-gradient-to-br from-[var(--color-secondary)] to-[var(--color-secondary-dark)] rounded-2xl p-10 text-white">
                 <div class="bg-white/20 w-16 h-16 rounded-xl flex items-center justify-center mb-8">
-                    <i data-lucide="target" class="w-8 h-8"></i>
+                   <i class="fa-solid fa-bullseye text-2xl"></i>
                 </div>
                 <h2 class="text-white mb-6">Misi Sekolah</h2>
                 <p class="text-white/90 mb-6">
@@ -50,42 +58,6 @@
             </div>
         </div>
     </section>
-
-
-    {{-- <!-- Core Values -->
-    <section class="mb-32">
-        <h2 class="text-center mb-16">Our Core Values</h2>
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
-                <div class="bg-[var(--color-primary)]/10 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i data-lucide="award" class="w-8 h-8 text-[var(--color-primary)]"></i>
-                </div>
-                <h4 class="mb-3">Excellence</h4>
-                <p class="text-sm text-[var(--color-neutral-700)] leading-relaxed">Striving for the highest standards in all endeavors</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
-                <div class="bg-[var(--color-primary)]/10 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i data-lucide="users" class="w-8 h-8 text-[var(--color-primary)]"></i>
-                </div>
-                <h4 class="mb-3">Community</h4>
-                <p class="text-sm text-[var(--color-neutral-700)] leading-relaxed">Building strong relationships and collaboration</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
-                <div class="bg-[var(--color-primary)]/10 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i data-lucide="trending-up" class="w-8 h-8 text-[var(--color-primary)]"></i>
-                </div>
-                <h4 class="mb-3">Growth</h4>
-                <p class="text-sm text-[var(--color-neutral-700)] leading-relaxed">Continuous learning and personal development</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition-shadow">
-                <div class="bg-[var(--color-primary)]/10 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i data-lucide="target" class="w-8 h-8 text-[var(--color-primary)]"></i>
-                </div>
-                <h4 class="mb-3">Integrity</h4>
-                <p class="text-sm text-[var(--color-neutral-700)] leading-relaxed">Upholding honesty, respect, and responsibility</p>
-            </div>
-        </div>
-    </section> --}}
 
     <!-- School History Timeline -->
     <section class="mb-24 max-w-4xl mx-auto">
@@ -144,7 +116,7 @@
     <!-- Accreditation -->
     <section>
         <div class="bg-gradient-to-r from-[var(--color-secondary)]/10 to-[var(--color-primary)]/10 rounded-2xl p-10 text-center">
-            <i data-lucide="award" class="w-16 h-16 text-[var(--color-primary)] mx-auto mb-6"></i>
+            <i class="fa-solid fa-award text-4xl text-[var(--color-primary)] mx-auto mb-6"></i>
             <h2 class="mb-4">Akreditasi Sekolah</h2>
             <p class="mb-6 text-[var(--color-neutral-700)]">
                 Akreditasi Terakhir: B (Baik) <br>
@@ -156,7 +128,7 @@
                 href="{{ asset('storage/assets/foto-akreditasi.jpg') }}" 
                 target="_blank"
                 class="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-primary)] text-white rounded-lg hover:bg-[var(--color-primary-dark)] transition">
-                <i data-lucide="image" class="w-5 h-5"></i>
+                <i class="fa-regular fa-image text-base"></i>
                 Lihat Sertifikat Akreditasi
             </a>
         </div>

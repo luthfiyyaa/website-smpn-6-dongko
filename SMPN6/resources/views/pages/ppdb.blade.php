@@ -19,23 +19,6 @@
     </div>
 </section>
 
-<!-- Success Message -->
-@if(session('success'))
-    <section class="py-8 bg-green-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white border-2 border-green-500 rounded-2xl p-8 text-center shadow-lg">
-                <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i data-lucide="check-circle" class="w-10 h-10 text-green-600"></i>
-                </div>
-                <h3 class="text-green-900 mb-4">Pendaftaran berhasil!</h3>
-                <p class="text-green-700 text-lg">
-                    {{ session('success') }}
-                </p>
-            </div>
-        </div>
-    </section>
-@endif
-
 <!-- Admission Steps -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,9 +41,9 @@
                     <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
                         1
                     </div>
-                    <h3 class="mb-4">Fill Application</h3>
+                    <h3 class="mb-4">Isi Formulir</h3>
                     <p class="text-[var(--color-neutral-700)]">
-                        Complete the online registration form with accurate information
+                        Lengkapi formulir pendaftaran online dengan informasi yang akurat
                     </p>
                 </div>
                 <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
@@ -74,9 +57,9 @@
                     <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
                         2
                     </div>
-                    <h3 class="mb-4">Submit Documents</h3>
+                    <h3 class="mb-4">Kirim Dokumen</h3>
                     <p class="text-[var(--color-neutral-700)]">
-                        Upload required documents and academic records
+                        Upload dokumen yang diperlukan dan rekam akademik
                     </p>
                 </div>
                 <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
@@ -90,9 +73,9 @@
                     <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
                         3
                     </div>
-                    <h3 class="mb-4">Assessment</h3>
+                    <h3 class="mb-4">Tes & Wawancara</h3>
                     <p class="text-[var(--color-neutral-700)]">
-                        Participate in entrance test and interview session
+                        Ikuti tes masuk dan sesi wawancara
                     </p>
                 </div>
                 <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
@@ -105,9 +88,9 @@
                 <div class="bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
                     4
                 </div>
-                <h3 class="mb-4">Enrollment</h3>
+                <h3 class="mb-4">Daftar Ulang</h3>
                 <p class="text-[var(--color-neutral-700)]">
-                    Receive acceptance letter and complete enrollment
+                    Terima surat penerimaan dan lengkapi daftar ulang
                 </p>
             </div>
         </div>
@@ -121,10 +104,10 @@
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
                     <i data-lucide="file-text" class="w-5 h-5"></i>
-                    Requirements
+                    Persyaratan
                 </span>
             </div>
-            <h2 class="mb-6">Admission Requirements</h2>
+            <h2 class="mb-6">Persyaratan Pendaftaran</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
@@ -134,32 +117,32 @@
                     <div class="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
                         <i data-lucide="folder" class="w-7 h-7 text-blue-600"></i>
                     </div>
-                    <h3>Required Documents</h3>
+                    <h3>Dokumen yang Diperlukan</h3>
                 </div>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
                         <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Birth certificate (original and photocopy)</span>
+                        <span class="text-[var(--color-neutral-700)]">Akta kelahiran (asli dan fotokopi)</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Previous school report card (last 2 years)</span>
+                        <span class="text-[var(--color-neutral-700)]">Rapor sekolah sebelumnya (2 tahun terakhir)</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Family card (KK) photocopy</span>
+                        <span class="text-[var(--color-neutral-700)]">Fotokopi Kartu Keluarga (KK)</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Parent ID card photocopy</span>
+                        <span class="text-[var(--color-neutral-700)]">Fotokopi KTP orang tua</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Recent passport-size photos (3x4 cm, 4 sheets)</span>
+                        <span class="text-[var(--color-neutral-700)]">Pas foto terbaru ukuran 3x4 cm (4 lembar)</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-[var(--color-neutral-700)]">Health certificate from doctor</span>
+                        <span class="text-[var(--color-neutral-700)]">Surat keterangan sehat dari dokter</span>
                     </li>
                 </ul>
             </div>
@@ -170,42 +153,42 @@
                     <div class="bg-green-100 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
                         <i data-lucide="info" class="w-7 h-7 text-green-600"></i>
                     </div>
-                    <h3>Important Dates</h3>
+                    <h3>Jadwal Penting</h3>
                 </div>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
-                            <div class="text-[var(--color-neutral-900)] mb-1">Registration Period</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">January 15 - March 31, 2024</div>
+                            <div class="text-[var(--color-neutral-900)] mb-1">Periode Pendaftaran</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">15 Januari - 31 Maret 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
-                            <div class="text-[var(--color-neutral-900)] mb-1">Entrance Test</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">April 10-20, 2024</div>
+                            <div class="text-[var(--color-neutral-900)] mb-1">Tes Masuk</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">10-20 April 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
-                            <div class="text-[var(--color-neutral-900)] mb-1">Result Announcement</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">May 1, 2024</div>
+                            <div class="text-[var(--color-neutral-900)] mb-1">Pengumuman Hasil</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">1 Mei 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
-                            <div class="text-[var(--color-neutral-900)] mb-1">Re-registration</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">May 5-15, 2024</div>
+                            <div class="text-[var(--color-neutral-900)] mb-1">Daftar Ulang</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">5-15 Mei 2026</div>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
                         <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
-                            <div class="text-[var(--color-neutral-900)] mb-1">Academic Year Starts</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">July 15, 2024</div>
+                            <div class="text-[var(--color-neutral-900)] mb-1">Tahun Ajaran Dimulai</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">15 Juli 2026</div>
                         </div>
                     </li>
                 </ul>
@@ -214,201 +197,49 @@
     </div>
 </section>
 
-<!-- Registration Form -->
+<!-- Google Form Section -->
 <section class="py-16 bg-white" id="registration-form">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
                 <span class="text-[var(--color-primary)] flex items-center gap-2">
                     <i data-lucide="file-edit" class="w-5 h-5"></i>
-                    Online Registration
+                    Pendaftaran Online
                 </span>
             </div>
-            <h2 class="mb-6">Submit Your Application</h2>
+            <h2 class="mb-6">Formulir Pendaftaran</h2>
             <p class="text-xl text-[var(--color-neutral-700)]">
-                Fill out the form below to start your admission process
+                Isi formulir di bawah ini untuk memulai proses pendaftaran
             </p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-[var(--color-neutral-200)] p-10">
-            @if ($errors->any())
-                <div class="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-8">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i data-lucide="alert-circle" class="w-5 h-5"></i>
-                        <span>Please correct the following errors:</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-1 ml-8">
-                        @foreach ($errors->all() as $error)
-                            <li class="text-sm">{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-[var(--color-neutral-200)] overflow-hidden">
+            <!-- Google Form Embed -->
+            <div class="relative" style="padding-bottom: 100%; height: 0; overflow: hidden;">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSc9305pfZNnj2VhUqCC4RdsBghCB6RanaANcpnvHBICalkoMw/viewform?embedded=true" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="absolute top-0 left-0 w-full h-full"
+                    style="min-height: 800px;">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
 
-            <form method="POST" action="{{ route('ppdb.submit') }}" class="space-y-8">
-                @csrf
-
-                <!-- Student Information -->
-                <div>
-                    <h3 class="mb-6 pb-3 border-b border-[var(--color-neutral-200)]">Student Information</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="student_name" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Student Full Name <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                name="student_name" 
-                                id="student_name" 
-                                value="{{ old('student_name') }}"
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                                placeholder="Enter student's full name">
-                        </div>
-
-                        <div>
-                            <label for="birth_date" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Date of Birth <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="date" 
-                                name="birth_date" 
-                                id="birth_date" 
-                                value="{{ old('birth_date') }}"
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent">
-                        </div>
-
-                        <div>
-                            <label for="grade_level" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Grade Level Applying For <span class="text-red-500">*</span>
-                            </label>
-                            <select 
-                                name="grade_level" 
-                                id="grade_level" 
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent">
-                                <option value="">Select grade level</option>
-                                <option value="Grade 1" {{ old('grade_level') == 'Grade 1' ? 'selected' : '' }}>Grade 1</option>
-                                <option value="Grade 2" {{ old('grade_level') == 'Grade 2' ? 'selected' : '' }}>Grade 2</option>
-                                <option value="Grade 3" {{ old('grade_level') == 'Grade 3' ? 'selected' : '' }}>Grade 3</option>
-                                <option value="Grade 4" {{ old('grade_level') == 'Grade 4' ? 'selected' : '' }}>Grade 4</option>
-                                <option value="Grade 5" {{ old('grade_level') == 'Grade 5' ? 'selected' : '' }}>Grade 5</option>
-                                <option value="Grade 6" {{ old('grade_level') == 'Grade 6' ? 'selected' : '' }}>Grade 6</option>
-                                <option value="Grade 7" {{ old('grade_level') == 'Grade 7' ? 'selected' : '' }}>Grade 7</option>
-                                <option value="Grade 8" {{ old('grade_level') == 'Grade 8' ? 'selected' : '' }}>Grade 8</option>
-                                <option value="Grade 9" {{ old('grade_level') == 'Grade 9' ? 'selected' : '' }}>Grade 9</option>
-                                <option value="Grade 10" {{ old('grade_level') == 'Grade 10' ? 'selected' : '' }}>Grade 10</option>
-                                <option value="Grade 11" {{ old('grade_level') == 'Grade 11' ? 'selected' : '' }}>Grade 11</option>
-                                <option value="Grade 12" {{ old('grade_level') == 'Grade 12' ? 'selected' : '' }}>Grade 12</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="previous_school" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Previous School
-                            </label>
-                            <input 
-                                type="text" 
-                                name="previous_school" 
-                                id="previous_school" 
-                                value="{{ old('previous_school') }}"
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                                placeholder="Name of previous school">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Parent/Guardian Information -->
-                <div>
-                    <h3 class="mb-6 pb-3 border-b border-[var(--color-neutral-200)]">Parent/Guardian Information</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="parent_name" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Parent/Guardian Full Name <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                name="parent_name" 
-                                id="parent_name" 
-                                value="{{ old('parent_name') }}"
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                                placeholder="Enter parent/guardian name">
-                        </div>
-
-                        <div>
-                            <label for="phone" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Phone Number <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="tel" 
-                                name="phone" 
-                                id="phone" 
-                                value="{{ old('phone') }}"
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                                placeholder="+62 812 3456 7890">
-                        </div>
-
-                        <div class="md:col-span-2">
-                            <label for="email" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Email Address <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="email" 
-                                name="email" 
-                                id="email" 
-                                value="{{ old('email') }}"
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                                placeholder="parent@email.com">
-                        </div>
-
-                        <div class="md:col-span-2">
-                            <label for="address" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                                Full Address <span class="text-red-500">*</span>
-                            </label>
-                            <textarea 
-                                name="address" 
-                                id="address" 
-                                rows="3"
-                                required
-                                class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                                placeholder="Enter complete home address">{{ old('address') }}</textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Information -->
-                <div>
-                    <h3 class="mb-6 pb-3 border-b border-[var(--color-neutral-200)]">Additional Information</h3>
-                    <div>
-                        <label for="message" class="block text-sm mb-2 text-[var(--color-neutral-700)]">
-                            Message / Special Notes (Optional)
-                        </label>
-                        <textarea 
-                            name="message" 
-                            id="message" 
-                            rows="4"
-                            class="w-full px-5 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                            placeholder="Any additional information you'd like to share...">{{ old('message') }}</textarea>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="pt-6 border-t border-[var(--color-neutral-200)]">
-                    <button 
-                        type="submit"
-                        class="w-full bg-[var(--color-primary)] text-white py-5 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-3">
-                        <span class="text-lg">Submit Application</span>
-                        <i data-lucide="send" class="w-5 h-5"></i>
-                    </button>
-                    <p class="text-sm text-[var(--color-neutral-700)] text-center mt-4">
-                        By submitting this form, you agree to our terms and conditions
-                    </p>
-                </div>
-            </form>
+        <!-- Alternative: Open in New Tab Button -->
+        <div class="text-center mt-8">
+            <p class="text-[var(--color-neutral-700)] mb-4">
+                Atau buka formulir di tab baru untuk pengalaman yang lebih baik
+            </p>
+            <a 
+                href="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform" 
+                target="_blank"
+                class="inline-flex items-center gap-3 bg-[var(--color-primary)] text-white px-8 py-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors">
+                <span>Buka Formulir di Tab Baru</span>
+                <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -418,9 +249,9 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white rounded-2xl p-10">
             <div class="text-center mb-8">
-                <h2 class="text-white mb-4">Need Help?</h2>
+                <h2 class="text-white mb-4">Butuh Bantuan?</h2>
                 <p class="text-white/90 text-lg">
-                    Our admissions team is here to assist you with any questions
+                    Tim penerimaan siswa baru kami siap membantu Anda dengan pertanyaan apapun
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
@@ -428,7 +259,7 @@
                     <div class="bg-white/20 backdrop-blur-sm w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="phone" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-sm text-white/80 mb-2">Phone</div>
+                    <div class="text-sm text-white/80 mb-2">Telepon</div>
                     <div class="text-white">+62 21 1234 5678</div>
                 </div>
                 <div class="text-center">
@@ -436,14 +267,14 @@
                         <i data-lucide="mail" class="w-7 h-7"></i>
                     </div>
                     <div class="text-sm text-white/80 mb-2">Email</div>
-                    <div class="text-white">admissions@harmonyacademy.edu</div>
+                    <div class="text-white">ppdb@smpn6dongko.sch.id</div>
                 </div>
                 <div class="text-center">
                     <div class="bg-white/20 backdrop-blur-sm w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="clock" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-sm text-white/80 mb-2">Office Hours</div>
-                    <div class="text-white">Mon-Fri: 8:00 AM - 4:00 PM</div>
+                    <div class="text-sm text-white/80 mb-2">Jam Kerja</div>
+                    <div class="text-white">Senin-Jumat: 08:00 - 16:00</div>
                 </div>
             </div>
         </div>

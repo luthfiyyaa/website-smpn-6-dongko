@@ -53,31 +53,30 @@
                 @auth
                     @if(auth()->user()->role === 'admin')
                         <a href="{{ route('admin.dashboard') }}" 
-                           class="bg-[var(--color-primary)] text-white px-5 py-2 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center gap-2">
-                            <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                           class="bg-[var(--color-secondary)] text-white px-5 py-2 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-gauge"></i>
                             Dashboard
                         </a>
                     @endif
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
                         <button type="submit" class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
-                            <i data-lucide="log-out" class="w-4 h-4"></i>
+                            <i class="fa-solid fa-right-from-bracket"></i>
                             Logout
                         </button>
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
-                        Login
-                    </a>
-                    <a href="{{ route('register') }}" class="bg-[var(--color-primary)] text-white px-5 py-2 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
-                        Register
+                    <a href="{{ route('login') }}" 
+                    class="bg-[var(--color-primary)] text-white px-5 py-2 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
+                        <i class="fa-solid fa-right-to-bracket mr-2"></i>
+                        Masuk
                     </a>
                 @endauth
             </nav>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="lg:hidden p-2 text-[var(--color-neutral-700)]">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+                <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
@@ -127,11 +126,10 @@
                     </button>
                 </form>
             @else
-                <a href="{{ route('login') }}" class="block w-full text-left px-5 py-3 rounded-lg text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]">
-                    Login
-                </a>
-                <a href="{{ route('register') }}" class="block w-full text-left px-5 py-3 rounded-lg bg-[var(--color-primary)] text-white">
-                    Register
+                <a href="{{ route('login') }}" 
+                class="block w-full text-left px-5 py-3 rounded-lg bg-[var(--color-primary)] text-white">
+                    <i class="fa-solid fa-right-to-bracket mr-2"></i>
+                    Masuk
                 </a>
             @endauth
         </nav>

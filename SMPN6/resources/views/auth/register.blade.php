@@ -8,10 +8,10 @@
         <div class="bg-white rounded-2xl shadow-xl p-10">
             <div class="text-center mb-10">
                 <div class="bg-[var(--color-primary)] p-4 rounded-xl inline-block mb-6">
-                    <i data-lucide="user-plus" class="w-12 h-12 text-white"></i>
+                   <i class="fa-solid fa-user-plus text-white"></i>
                 </div>
-                <h2 class="mb-3">Create Account</h2>
-                <p class="text-[var(--color-neutral-700)]">Join Harmony Academy community</p>
+                <h2 class="mb-3">Buat Akun Baru</h2>
+                <p class="text-[var(--color-neutral-700)]">Bergabung bersama keluarga ESNADO</p>
             </div>
 
             @if ($errors->any())
@@ -28,7 +28,7 @@
                 @csrf
 
                 <div>
-                    <label for="name" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Full Name</label>
+                    <label for="name" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Nama Lengkap</label>
                     <input 
                         type="text" 
                         name="name" 
@@ -41,7 +41,7 @@
                 </div>
 
                 <div>
-                    <label for="email" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Email Address</label>
+                    <label for="email" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Email</label>
                     <input 
                         type="email" 
                         name="email" 
@@ -65,7 +65,7 @@
                 </div>
 
                 <div>
-                    <label for="password_confirmation" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Confirm Password</label>
+                    <label for="password_confirmation" class="block text-sm mb-2 text-[var(--color-neutral-700)]">Konfirmasi Password</label>
                     <input 
                         type="password" 
                         name="password_confirmation" 
@@ -78,14 +78,14 @@
                 <button 
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-4 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
-                    Create Account
+                    Buat Akun
                 </button>
             </form>
 
             <div class="mt-8 text-center">
                 <p class="text-sm text-[var(--color-neutral-700)]">
-                    Already have an account? 
-                    <a href="{{ route('login') }}" class="text-[var(--color-primary)] hover:underline">Sign in</a>
+                    Sudah memiliki akun?
+                    <a href="{{ route('login') }}" class="text-[var(--color-primary)] hover:underline">Masuk</a>
                 </p>
             </div>
         </div>

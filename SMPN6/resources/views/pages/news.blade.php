@@ -8,11 +8,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
             <span class="flex items-center gap-2">
-                <i data-lucide="newspaper" class="w-5 h-5"></i>
+                <i class="fa-regular fa-newspaper text-lg"></i>
                 Unggahan Terbaru
             </span>
         </div>
-        <h1 class="text-white mb-6">Berita Sekolah</h1>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl font-bold">Berita Sekolah</h1>
         <p class="text-xl text-white/90 max-w-3xl mx-auto">
             Tetap mendapatkan informasi dari berita, acara, dan pengumuman terbaru SMP Negeri 6 Dongko
         </p>
@@ -34,7 +34,7 @@
                                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             @else
                                 <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-secondary)]/20">
-                                    <i data-lucide="image" class="w-16 h-16 text-[var(--color-neutral-400)]"></i>
+                                    <i class="fa-regular fa-image text-4xl text-[var(--color-neutral-400)]"></i>
                                 </div>
                             @endif
                             
@@ -50,12 +50,12 @@
                         <div class="p-6">
                             <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)] mb-4">
                                 <span class="flex items-center gap-2">
-                                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                                    <i class="fa-regular fa-calendar-days text-sm"></i>
                                     {{ $news->published_at ? $news->published_at->format('M d, Y') : $news->created_at->format('M d, Y') }}
                                 </span>
                                 @if($news->author)
                                     <span class="flex items-center gap-2">
-                                        <i data-lucide="user" class="w-4 h-4"></i>
+                                        <i class="fa-regular fa-user text-sm"></i>
                                         {{ $news->author->name }}
                                     </span>
                                 @endif
@@ -72,7 +72,7 @@
                             <a href="{{ route('news.detail', $news->id) }}" 
                                class="inline-flex items-center gap-2 text-[var(--color-primary)] hover:gap-3 transition-all">
                                 <span>Baca Selengkapnya</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
                             </a>
                         </div>
                     </article>
@@ -87,7 +87,7 @@
             <!-- Empty State -->
             <div class="text-center py-20">
                 <div class="bg-[var(--color-neutral-100)] w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i data-lucide="newspaper" class="w-12 h-12 text-[var(--color-neutral-400)]"></i>
+                    <i class="fa-regular fa-newspaper text-3xl text-[var(--color-neutral-400)]"></i>
                 </div>
                 <h3 class="mb-4 text-[var(--color-neutral-900)]">Tidak ada berita yang tersedia</h3>
                 <p class="text-[var(--color-neutral-700)] mb-8">
@@ -95,7 +95,7 @@
                 </p>
                 <a href="{{ route('home') }}" 
                    class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-8 py-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors">
-                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-arrow-left"></i>
                     <span>Kembali ke Beranda</span>
                 </a>
             </div>
@@ -108,7 +108,7 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="bg-white rounded-2xl shadow-lg p-10">
             <div class="bg-[var(--color-primary)]/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="bell" class="w-10 h-10 text-[var(--color-primary)]"></i>
+                <i class="fa-regular fa-bell text-3xl text-[var(--color-primary)]"></i>
             </div>
             <h2 class="mb-4">Tetap Bergabung</h2>
             <p class="text-xl text-[var(--color-neutral-700)] mb-8">

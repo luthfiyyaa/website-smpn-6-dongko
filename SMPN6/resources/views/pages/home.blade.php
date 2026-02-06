@@ -25,7 +25,7 @@
             <div class="flex flex-wrap gap-4">
                 <a href="{{ route('ppdb') }}" class="bg-white text-[var(--color-primary)] px-10 py-4 rounded-lg hover:bg-[var(--color-neutral-100)] transition-colors flex items-center gap-2">
                     Daftar Sekarang
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
                 <a href="{{ route('profile') }}" class="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white/10 transition-colors">
                     Pelajari Selengkapnya
@@ -39,22 +39,22 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10 mb-32">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-            <i data-lucide="users" class="w-12 h-12 text-[var(--color-primary)] mx-auto mb-4"></i>
+            <i class="fa-solid fa-users text-4xl text-[var(--color-primary)] mx-auto mb-4"></i>
             <div class="text-4xl text-[var(--color-neutral-900)] mb-2">1,200+</div>
             <div class="text-[var(--color-neutral-700)]">Students</div>
         </div>
         <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-            <i data-lucide="user-check" class="w-12 h-12 text-[var(--color-primary)] mx-auto mb-4"></i>
+            <i class="fa-solid fa-user-check text-4xl text-[var(--color-primary)] mx-auto mb-4"></i>
             <div class="text-4xl text-[var(--color-neutral-900)] mb-2">120+</div>
             <div class="text-[var(--color-neutral-700)]">Teachers</div>
         </div>
         <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-            <i data-lucide="award" class="w-12 h-12 text-[var(--color-primary)] mx-auto mb-4"></i>
+            <i class="fa-solid fa-award text-4xl text-[var(--color-primary)] mx-auto mb-4"></i>
             <div class="text-4xl text-[var(--color-neutral-900)] mb-2">30+</div>
             <div class="text-[var(--color-neutral-700)]">Years</div>
         </div>
         <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-            <i data-lucide="trophy" class="w-12 h-12 text-[var(--color-primary)] mx-auto mb-4"></i>
+            <i class="fa-solid fa-trophy text-4xl text-[var(--color-primary)] mx-auto mb-4"></i>
             <div class="text-4xl text-[var(--color-neutral-900)] mb-2">500+</div>
             <div class="text-[var(--color-neutral-700)]">Awards</div>
         </div>
@@ -102,7 +102,7 @@
             <p class="text-[var(--color-neutral-700)]">Tetap ikuti perkembangan berita, acara, dan pencapaian terbaru kami.</p> 
         </div> 
         <a href="{{ route('news') }}" class="hidden sm:flex items-center gap-2 text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"> Lainnya 
-            <i data-lucide="arrow-right" class="w-5 h-5"></i> 
+            <i class="fa-solid fa-arrow-right"></i>
         </a> 
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +119,7 @@
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                         @else
                             <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-secondary)]/20">
-                                <i data-lucide="image" class="w-16 h-16 text-[var(--color-neutral-400)]"></i>
+                                <i class="fa-solid fa-image text-5xl text-[var(--color-neutral-400)]"></i>
                             </div>
                         @endif
 
@@ -132,7 +132,7 @@
                 <!-- Content -->
                 <div class="p-6">
                     <div class="flex items-center gap-2 text-sm text-[var(--color-neutral-600)] mb-3">
-                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <i class="fa-solid fa-calendar-days"></i>
                         {{ $news->created_at->format('M d, Y') }}
                     </div>
 
@@ -173,7 +173,7 @@
     <div class="text-center mt-10">
         <a href="{{ route('facilities') }}" class="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] inline-flex items-center gap-2">
             Lihat Fasilitas Kami
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            <i class="fa-solid fa-arrow-right"></i>
         </a>
     </div>
 </section>
@@ -187,7 +187,7 @@
         </p>
         <a href="{{ route('ppdb') }}" class="bg-white text-[var(--color-primary)] px-10 py-4 rounded-lg hover:bg-[var(--color-neutral-100)] transition-colors inline-flex items-center gap-2">
             Mulai Mendaftar
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            <i class="fa-solid fa-arrow-right"></i>
         </a>
     </div>
 </section>

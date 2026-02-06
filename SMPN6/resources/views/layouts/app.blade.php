@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="{{ asset('storage\assets\logo.png') }}" type="image/x-icon">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Harmony Academy - Excellence in Education')</title>
-    <meta name="description" content="@yield('description', 'Harmony Academy - Empowering students to achieve excellence through quality education')">
+    
+    <title>@yield('title', 'SMP Negeri 6 dongko')</title>
+    <meta name="description" content="@yield('description', 'SMP Negeri 6 Dongko')">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -112,10 +115,10 @@
             line-height: 1.75;
         }
     </style>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ 
     @stack('styles')
 </head>
 <body>
@@ -128,8 +131,6 @@
     @include('partials.footer')
     
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
         
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');

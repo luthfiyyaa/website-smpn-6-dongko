@@ -7,349 +7,397 @@
 <section class="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
-            <span class="flex items-center gap-2">
-                <i data-lucide="trophy" class="w-5 h-5"></i>
-                Student Life
+            <span class="flex items-center gap-2 text-white">
+                <i class="fas fa-users"></i>
+                Kehidupan Siswa
             </span>
         </div>
-        <h1 class="text-white mb-6">Student Affairs</h1>
-        <p class="text-xl text-white/90 max-w-3xl mx-auto">
-            Empowering students through achievements, activities, and holistic development
+        <h1 class="text-white mb-6 text-4xl md:text-5xl font-bold">Kesiswaan</h1>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            Memberdayakan siswa melalui prestasi, aktivitas, dan pengembangan karakter yang holistik
         </p>
     </div>
 </section>
 
-<!-- Student Achievements -->
+<!-- Prestasi Siswa -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i data-lucide="award" class="w-5 h-5"></i>
+            <div class="inline-block bg-blue-100 px-6 py-3 rounded-full mb-6">
+                <span class="text-blue-700 flex items-center gap-2 font-semibold">
+                    <i class="fas fa-trophy"></i>
                     Penghargaan
                 </span>
             </div>
-            <h2 class="mb-6">Kejuaraan Siswa</h2>
-            <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
-                Celebrating excellence and success across academics, sports, and arts
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prestasi Siswa</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                SMP Negeri 6 Dongko Satu Atap secara konsisten menunjukkan komitmen dalam meningkatkan mutu pendidikan dan pengembangan potensi peserta didik
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Academic Excellence -->
-            <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow">
-                <div class="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Prestasi 1 -->
+            <div class="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-yellow-500">
+                <div class="bg-yellow-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-pen-fancy text-3xl text-yellow-600"></i>
                 </div>
-                <h3 class="mb-4">Academic Excellence</h3>
-                <p class="text-[var(--color-neutral-700)] mb-6">
-                    95% of students scored above national average in standardized tests
+                <div class="bg-yellow-600 text-white text-center py-2 rounded-lg mb-4">
+                    <span class="font-bold">Juara 1</span>
+                </div>
+                <h4 class="font-bold text-center mb-2 text-gray-800">Lomba Kaligrafi</h4>
+                <p class="text-sm text-center text-gray-600">
+                    Tingkat Kecamatan Dongko
                 </p>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">National Science Fair - 1st Place</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Mathematics Olympiad - Gold Medal</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Essay Competition - Top 3 Winners</span>
-                    </li>
-                </ul>
+                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2024</p>
             </div>
 
-            <!-- Sports Achievements -->
-            <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow">
-                <div class="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="trophy" class="w-8 h-8 text-green-600"></i>
+            <!-- Prestasi 2 -->
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-green-500">
+                <div class="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-heartbeat text-3xl text-green-600"></i>
                 </div>
-                <h3 class="mb-4">Sports Champions</h3>
-                <p class="text-[var(--color-neutral-700)] mb-6">
-                    Multiple championship titles in regional and national tournaments
+                <div class="bg-green-600 text-white text-center py-2 rounded-lg mb-4">
+                    <span class="font-bold">Peringkat 6</span>
+                </div>
+                <h4 class="font-bold text-center mb-2 text-gray-800">Lomba Senam</h4>
+                <p class="text-sm text-center text-gray-600">
+                    Tingkat Provinsi Jawa Timur
                 </p>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Basketball Championship Winners</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Swimming Team - Regional Champions</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Track & Field - Multiple Medals</span>
-                    </li>
-                </ul>
+                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2025</p>
             </div>
 
-            <!-- Arts & Culture -->
-            <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow">
-                <div class="bg-purple-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="palette" class="w-8 h-8 text-purple-600"></i>
+            <!-- Prestasi 3 -->
+            <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-500">
+                <div class="bg-purple-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-palette text-3xl text-purple-600"></i>
                 </div>
-                <h3 class="mb-4">Arts & Culture</h3>
-                <p class="text-[var(--color-neutral-700)] mb-6">
-                    Creative excellence in music, drama, and visual arts competitions
+                <div class="bg-purple-600 text-white text-center py-2 rounded-lg mb-4">
+                    <span class="font-bold">Juara Harapan 2</span>
+                </div>
+                <h4 class="font-bold text-center mb-2 text-gray-800">Mewarnai Wayang</h4>
+                <p class="text-sm text-center text-gray-600">
+                    Tingkat Kabupaten Trenggalek
                 </p>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">National Music Festival - Best Performance</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Art Exhibition - Featured Artists</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-[var(--color-neutral-700)]">Drama Competition - Best Production</span>
-                    </li>
-                </ul>
+                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2024</p>
+            </div>
+
+            <!-- Prestasi 4 -->
+            <div class="bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-red-500">
+                <div class="bg-red-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-music text-3xl text-red-600"></i>
+                </div>
+                <div class="bg-red-600 text-white text-center py-2 rounded-lg mb-4">
+                    <span class="font-bold">Juara Harapan 2</span>
+                </div>
+                <h4 class="font-bold text-center mb-2 text-gray-800">Lomba Macapat</h4>
+                <p class="text-sm text-center text-gray-600">
+                    Tingkat Kecamatan Dongko
+                </p>
+                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2023</p>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border-l-4 border-blue-600">
+            <div class="flex items-start gap-4">
+                <i class="fas fa-quote-left text-3xl text-blue-600 mt-2"></i>
+                <div>
+                    <p class="text-gray-700 text-lg italic mb-4">
+                        Prestasi-prestasi ini mencerminkan dedikasi dari seluruh warga sekolah mulai dari siswa, guru, hingga tenaga kependidikan dalam menciptakan lingkungan belajar yang unggul, berkarakter, dan berdaya saing.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Student Activities & Clubs -->
-<section class="py-16 bg-[var(--color-neutral-50)]">
+<!-- Kegiatan OSIS -->
+<section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i data-lucide="users" class="w-5 h-5"></i>
-                    Activities
+            <div class="inline-block bg-green-100 px-6 py-3 rounded-full mb-6">
+                <span class="text-green-700 flex items-center gap-2 font-semibold">
+                    <i class="fas fa-users-cog"></i>
+                    Organisasi
                 </span>
             </div>
-            <h2 class="mb-6">Student Clubs & Activities</h2>
-            <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
-                Diverse opportunities for personal growth and skill development
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Kegiatan OSIS</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                OSIS SMP merupakan wadah organisasi resmi siswa yang berperan penting dalam pengembangan minat, bakat, kepemimpinan, serta kedisiplinan siswa
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- Science Club -->
-            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                <div class="flex items-start gap-6">
-                    <div class="bg-blue-100 p-4 rounded-xl flex-shrink-0">
-                        <i data-lucide="flask-conical" class="w-8 h-8 text-blue-600"></i>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Lomba dan Festival -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="bg-yellow-100 p-4 rounded-xl flex-shrink-0">
+                        <i class="fas fa-trophy text-2xl text-yellow-600"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="mb-3">Science & Robotics Club</h3>
-                        <p class="text-[var(--color-neutral-700)] mb-4">
-                            Hands-on experiments, robotics competitions, and STEM projects
-                        </p>
-                        <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)]">
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="users-2" class="w-4 h-4"></i>
-                                65 Members
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                Weekly
-                            </span>
-                        </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Lomba dan Festival</h3>
                     </div>
                 </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Mengadakan berbagai perlombaan internal dan eksternal seperti lomba kebersihan kelas, lomba cerdas cermat, lomba seni, hingga lomba olahraga antar kelas atau antar sekolah.
+                </p>
             </div>
 
-            <!-- Music & Drama -->
-            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                <div class="flex items-start gap-6">
-                    <div class="bg-purple-100 p-4 rounded-xl flex-shrink-0">
-                        <i data-lucide="music" class="w-8 h-8 text-purple-600"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="mb-3">Music & Drama Society</h3>
-                        <p class="text-[var(--color-neutral-700)] mb-4">
-                            Theater productions, musical performances, and creative expression
-                        </p>
-                        <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)]">
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="users-2" class="w-4 h-4"></i>
-                                45 Members
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                Bi-weekly
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sports Teams -->
-            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                <div class="flex items-start gap-6">
-                    <div class="bg-green-100 p-4 rounded-xl flex-shrink-0">
-                        <i data-lucide="bike" class="w-8 h-8 text-green-600"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="mb-3">Athletic Teams</h3>
-                        <p class="text-[var(--color-neutral-700)] mb-4">
-                            Basketball, soccer, swimming, track & field, and more
-                        </p>
-                        <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)]">
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="users-2" class="w-4 h-4"></i>
-                                120+ Athletes
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                Daily Practice
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Community Service -->
-            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                <div class="flex items-start gap-6">
-                    <div class="bg-orange-100 p-4 rounded-xl flex-shrink-0">
-                        <i data-lucide="heart-handshake" class="w-8 h-8 text-orange-600"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="mb-3">Community Service</h3>
-                        <p class="text-[var(--color-neutral-700)] mb-4">
-                            Volunteer programs, social initiatives, and environmental projects
-                        </p>
-                        <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)]">
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="users-2" class="w-4 h-4"></i>
-                                80 Volunteers
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                Monthly
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Debate Club -->
-            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                <div class="flex items-start gap-6">
+            <!-- Peringatan Hari Besar -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-4">
                     <div class="bg-red-100 p-4 rounded-xl flex-shrink-0">
-                        <i data-lucide="message-circle" class="w-8 h-8 text-red-600"></i>
+                        <i class="fas fa-flag text-2xl text-red-600"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="mb-3">Debate & Public Speaking</h3>
-                        <p class="text-[var(--color-neutral-700)] mb-4">
-                            Critical thinking, argumentation, and communication skills
-                        </p>
-                        <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)]">
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="users-2" class="w-4 h-4"></i>
-                                35 Members
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                Weekly
-                            </span>
-                        </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Peringatan Hari Besar</h3>
                     </div>
                 </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Melaksanakan kegiatan untuk memperingati hari-hari besar nasional dan keagamaan dengan upacara, pawai budaya, atau kegiatan sosial.
+                </p>
             </div>
 
-            <!-- Technology Club -->
-            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                <div class="flex items-start gap-6">
-                    <div class="bg-indigo-100 p-4 rounded-xl flex-shrink-0">
-                        <i data-lucide="laptop" class="w-8 h-8 text-indigo-600"></i>
+            <!-- LDK -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="bg-blue-100 p-4 rounded-xl flex-shrink-0">
+                        <i class="fas fa-user-graduate text-2xl text-blue-600"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="mb-3">Technology & Coding</h3>
-                        <p class="text-[var(--color-neutral-700)] mb-4">
-                            Programming, app development, and digital innovation
-                        </p>
-                        <div class="flex items-center gap-4 text-sm text-[var(--color-neutral-700)]">
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="users-2" class="w-4 h-4"></i>
-                                55 Coders
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                Bi-weekly
-                            </span>
-                        </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Latihan Dasar Kepemimpinan</h3>
                     </div>
                 </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Kegiatan pelatihan untuk membentuk karakter pemimpin yang bertanggung jawab dan disiplin, biasanya ditujukan untuk pengurus OSIS baru.
+                </p>
+            </div>
+
+            <!-- Bakti Sosial -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="bg-green-100 p-4 rounded-xl flex-shrink-0">
+                        <i class="fas fa-hands-helping text-2xl text-green-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Bakti Sosial</h3>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Kegiatan sosial yang bertujuan menumbuhkan rasa kepedulian siswa terhadap masyarakat, seperti penggalangan dana, kunjungan ke panti asuhan, atau pembagian sembako.
+                </p>
+            </div>
+
+            <!-- Pelatihan dan Workshop -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="bg-purple-100 p-4 rounded-xl flex-shrink-0">
+                        <i class="fas fa-chalkboard-teacher text-2xl text-purple-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Pelatihan dan Workshop</h3>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Mengadakan seminar atau pelatihan tentang kepemimpinan, etika, keterampilan komunikasi, anti bullying bersama polsek setempat dan topik lain yang bermanfaat.
+                </p>
+            </div>
+
+            <!-- Majalah Dinding -->
+            <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="bg-indigo-100 p-4 rounded-xl flex-shrink-0">
+                        <i class="fas fa-newspaper text-2xl text-indigo-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Majalah Dinding Sekolah</h3>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Menerbitkan karya tulis siswa seperti puisi, artikel, dan informasi seputar kegiatan sekolah dalam bentuk mading atau buletin.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Student Leadership -->
+<!-- Lomba yang Pernah Diikuti -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i data-lucide="shield" class="w-5 h-5"></i>
-                    Leadership
+            <div class="inline-block bg-purple-100 px-6 py-3 rounded-full mb-6">
+                <span class="text-purple-700 flex items-center gap-2 font-semibold">
+                    <i class="fas fa-medal"></i>
+                    Kompetisi
                 </span>
             </div>
-            <h2 class="mb-6">Student Government</h2>
-            <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
-                Developing future leaders through democratic participation
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Lomba-Lomba yang Pernah Diikuti</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Mendorong siswa untuk mengikuti berbagai lomba sebagai sarana mengembangkan potensi dan menumbuhkan semangat berprestasi
             </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <i data-lucide="crown" class="w-10 h-10 text-white"></i>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Lomba Akademik -->
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-blue-600 p-4 rounded-xl">
+                        <i class="fas fa-brain text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Lomba Akademik</h3>
                 </div>
-                <h3 class="mb-3">Student Council</h3>
-                <p class="text-[var(--color-neutral-700)]">
-                    Elected representatives advocating for student interests and organizing events
-                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                        <span class="text-gray-700">Olimpiade Sains Nasional (OSN)/KSN</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                        <span class="text-gray-700">Bidang Matematika, IPA, dan IPS</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                        <span class="text-gray-700">Tingkat Kecamatan hingga Kabupaten</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="text-center">
-                <div class="bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <i data-lucide="megaphone" class="w-10 h-10 text-white"></i>
+            <!-- Lomba Seni dan Budaya -->
+            <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-lg">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-purple-600 p-4 rounded-xl">
+                        <i class="fas fa-palette text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Lomba Seni dan Budaya</h3>
                 </div>
-                <h3 class="mb-3">Class Representatives</h3>
-                <p class="text-[var(--color-neutral-700)]">
-                    Liaison between students and teachers, ensuring effective communication
-                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                        <span class="text-gray-700">FLS3N (Festival Lomba Seni dan Sastra Siswa Nasional)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                        <span class="text-gray-700">Menyanyi Solo, Desain Grafis, Baca Puisi</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                        <span class="text-gray-700">Tingkat Kabupaten</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="text-center">
-                <div class="bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <i data-lucide="users-round" class="w-10 h-10 text-white"></i>
+            <!-- Lomba Kepramukaan -->
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-green-600 p-4 rounded-xl">
+                        <i class="fas fa-campground text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Lomba Kepramukaan</h3>
                 </div>
-                <h3 class="mb-3">Peer Mentors</h3>
-                <p class="text-[var(--color-neutral-700)]">
-                    Senior students guiding and supporting younger peers in their academic journey
-                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                        <span class="text-gray-700">Jambore Cabang tingkat Kabupaten</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                        <span class="text-gray-700">Regu Pramuka Penggalang</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                        <span class="text-gray-700">Pramuka Penggalang Garuda setiap tahun</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Lomba Literasi -->
+            <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-orange-600 p-4 rounded-xl">
+                        <i class="fas fa-book-open text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Lomba Literasi dan Bahasa</h3>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-orange-600 mt-1"></i>
+                        <span class="text-gray-700">Festival Lomba Seni dan Sastra Siswa Nasional</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-orange-600 mt-1"></i>
+                        <span class="text-gray-700">Lomba Baca Puisi</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-orange-600 mt-1"></i>
+                        <span class="text-gray-700">Tingkat Kabupaten</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-16 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-white mb-6">Join Our Community</h2>
-        <p class="text-xl text-white/90 mb-10">
-            Discover your passion, develop your talents, and make lifelong friendships
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('ppdb') }}" class="bg-white text-[var(--color-primary)] px-10 py-4 rounded-xl hover:bg-gray-50 transition-colors inline-flex items-center justify-center gap-3">
-                <span>Apply Now</span>
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </a>
-            <a href="{{ route('home') }}#contact" class="bg-white/10 backdrop-blur-sm text-white border-2 border-white px-10 py-4 rounded-xl hover:bg-white/20 transition-colors inline-flex items-center justify-center gap-3">
-                <span>Contact Us</span>
-            </a>
+<!-- Organisasi Siswa -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-indigo-100 px-6 py-3 rounded-full mb-6">
+                <span class="text-indigo-700 flex items-center gap-2 font-semibold">
+                    <i class="fas fa-sitemap"></i>
+                    Struktur Organisasi
+                </span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Organisasi Siswa</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Wadah pengembangan potensi, karakter, dan kepemimpinan siswa
+            </p>
         </div>
-    </div>
-</section>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- OSIS -->
+            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <i class="fas fa-users-cog text-4xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-3">OSIS</h3>
+                <p class="text-center text-gray-700 text-sm leading-relaxed">
+                    Organisasi Siswa Intra Sekolah yang mengelola berbagai kegiatan kesiswaan
+                </p>
+            </div>
+
+            <!-- Pramuka -->
+            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-gradient-to-br from-green-500 to-green-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <i class="fas fa-campground text-4xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-3">Pramuka</h3>
+                <p class="text-center text-gray-700 text-sm leading-relaxed">
+                    Membentuk karakter disiplin, tanggung jawab, dan kepemimpinan siswa
+                </p>
+            </div>
+
+            <!-- PMR -->
+            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-gradient-to-br from-red-500 to-red-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <i class="fas fa-medkit text-4xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-3">PMR</h3>
+                <p class="text-center text-gray-700 text-sm leading-relaxed">
+                    Palang Merah Remaja untuk kesehatan dan kegiatan sosial kemanusiaan
+                </p>
+            </div>
+
+            <!-- Organisasi Keagamaan -->
+            <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-gradient-to-br from-purple-500 to-purple-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <i class="fas fa-mosque text-4xl text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-3">SKI</h3>
+                <p class="text-center text-gray-700 text-sm leading-relaxed">
+                    Seksi Kerohanian Islam membina nilai-nilai spiritual dan moral siswa
+                </p>
+            </div>
+        </div>
+    </section>
+
 @endsection
