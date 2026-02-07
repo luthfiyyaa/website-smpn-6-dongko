@@ -5,13 +5,13 @@
 @section('content')
 <div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
     <div>
-        <h1 class="mb-2">Gallery Management</h1>
-        <p class="text-[var(--color-neutral-700)]">Upload and manage campus photos</p>
+        <h1 class="mb-2">Manajemen Galeri</h1>
+        <p class="text-[var(--color-neutral-700)]">Upload dan kelola galeri foto</p>
     </div>
     <a href="{{ route('admin.gallery.create') }}" 
        class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors inline-flex items-center justify-center gap-2">
         <i class="fa-solid fa-plus"></i>
-        <span>Upload Photo</span>
+        <span>Upload Foto</span>
     </a>
 </div>
 

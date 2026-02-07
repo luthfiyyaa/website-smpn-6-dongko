@@ -9,7 +9,7 @@
         <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
             <span class="flex items-center gap-2">
                 <i class="fa-solid fa-graduation-cap"></i>
-                PPDB 2026/2027
+                PPDB SMPN 6 DONGKO
             </span>
         </div>
         <h1 class="text-white mb-6">Pendaftaran Siswa</h1>
@@ -52,10 +52,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i class="fa-solid fa-file"></i>
-                    Persyaratan
-                </span>
+                <h2 class="text-3xl md:text-3xl font-bold">Persyaratan</h2>
             </div>
             <h2 class="mb-6">Persyaratan Pendaftaran</h2>
         </div>
@@ -194,10 +191,7 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i class="fa-solid fa-file"></i>
-                    Pendaftaran Online
-                </span>
+                <h2 class="text-3xl md:text-3xl font-bold">Pendaftaran Online</h2>
             </div>
             <h2 class="mb-6">Formulir Pendaftaran</h2>
             <p class="text-xl text-[var(--color-neutral-700)]">
@@ -254,7 +248,7 @@
                         <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </div>
                     <div class="text-sm text-white/80 mb-1">Candra S</div>
-                    <a href="https://wa.me/6282334945603" class="text-lg font-semibold">
+                    <a href="https://wa.me/6282334945603" target="_blank" class="text-lg font-semibold">
                         0823 3494 5603
                     </a>
                 </div>
@@ -263,7 +257,7 @@
                         <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </div>
                     <div class="text-sm text-white/80 mb-1">Sunartun</div>
-                    <a href="https://wa.me/6282228298868" class="text-lg font-semibold">
+                    <a href="https://wa.me/6282228298868" target="_blank" class="text-lg font-semibold">
                         0822 2829 8868
                     </a>
                 </div>

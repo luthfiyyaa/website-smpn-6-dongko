@@ -30,7 +30,7 @@
                     Visi & Misi
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Visi dan Misi Sekolah</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">Visi dan Misi Sekolah</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Fondasi yang memandu setiap langkah kami dalam membentuk generasi unggul
             </p>
@@ -109,7 +109,7 @@
                     Sejarah
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Sejarah Sekolah</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">Sejarah Sekolah</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Perjalanan panjang SMP Negeri 6 Dongko Satu Atap dari tahun 2008 hingga sekarang
             </p>
@@ -176,7 +176,7 @@
                     Struktur
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Struktur Organisasi</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">Struktur Organisasi</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Struktur organisasi sekolah SMP Negeri 6 Dongko Satu Atap
             </p>
@@ -237,7 +237,7 @@
                     Logo
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Makna Logo Sekolah</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">Makna Logo Sekolah</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Setiap elemen logo mencerminkan nilai dan filosofi pendidikan kami
             </p>

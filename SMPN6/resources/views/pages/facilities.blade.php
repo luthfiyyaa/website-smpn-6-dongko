@@ -23,7 +23,7 @@
 <section class="py-16 bg-[var(--color-neutral-50)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="mb-6">Fasilitas SMP Negeri 6 Dongko</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">Fasilitas SMP Negeri 6 Dongko</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -61,10 +61,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <div class="inline-block bg-[var(--color-primary)]/10 px-6 py-3 rounded-full mb-6">
-                <span class="text-[var(--color-primary)] flex items-center gap-2">
-                    <i class="fa-regular fa-images text-sm"></i>
-                    Galeri Foto Sekolah
-                </span>
+                <h2 class="text-3xl md:text-3xl font-bold">Galeri Foto Sekolah</h2>
             </div>
             <p class="text-xl text-[var(--color-neutral-700)] max-w-3xl mx-auto">
                 Mari melihat galeri foto sekolah kami

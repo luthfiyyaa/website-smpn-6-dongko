@@ -9,9 +9,9 @@
            class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
-        <h1>Edit Photo</h1>
+        <h1>Edit Foto</h1>
     </div>
-    <p class="text-[var(--color-neutral-700)]">Update photo details</p>
+    <p class="text-[var(--color-neutral-700)]">Update detail foto</p>
 </div>
 
 @if ($errors->any())

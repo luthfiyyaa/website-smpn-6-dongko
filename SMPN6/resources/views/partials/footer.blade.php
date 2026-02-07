@@ -45,16 +45,22 @@
                 <h4 class="text-white mb-6">Follow Us</h4>
                 <div class="flex gap-4">
                     <a href="https://www.tiktok.com/@smpn.6.dongko.sat?_r=1&_t=ZS-92pjanX08hR"
+                        target="_blank"
+                        rel="noopener noreferrer"
                        class="bg-[var(--color-neutral-800)] p-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors">
                         <i class="fa-brands fa-tiktok text-lg"></i>
                     </a>
 
                     <a href="https://www.instagram.com/smpn6_dongko?igsh=NGU1c2FiYWR6djg4"
+                        target="_blank"
+                        rel="noopener noreferrer"
                        class="bg-[var(--color-neutral-800)] p-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors">
                         <i class="fa-brands fa-instagram text-lg"></i>
                     </a>
 
                     <a href="https://youtube.com/@smpnsatap3dongko538?si=2Fp-eqyS-xqLJ6Jw"
+                        target="_blank"
+                        rel="noopener noreferrer"
                        class="bg-[var(--color-neutral-800)] p-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors">
                         <i class="fa-brands fa-youtube text-lg"></i>
                     </a>

@@ -29,7 +29,7 @@
                     Penghargaan
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prestasi Siswa</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-6">Prestasi Siswa</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 SMP Negeri 6 Dongko Satu Atap secara konsisten menunjukkan komitmen dalam meningkatkan mutu pendidikan dan pengembangan potensi peserta didik
             </p>
@@ -70,7 +70,7 @@
                     Organisasi
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Kegiatan OSIS</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-6">Kegiatan OSIS</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 OSIS SMP merupakan wadah organisasi resmi siswa yang berperan penting dalam pengembangan minat, bakat, kepemimpinan, serta kedisiplinan siswa
             </p>
@@ -180,7 +180,7 @@
                     Kompetisi
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Lomba-Lomba yang Pernah Diikuti</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-6">Lomba-Lomba yang Pernah Diikuti</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Mendorong siswa untuk mengikuti berbagai lomba sebagai sarana mengembangkan potensi dan menumbuhkan semangat berprestasi
             </p>
@@ -296,7 +296,7 @@
                     Struktur Organisasi
                 </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Organisasi Siswa</h2>
+            <h2 class="text-3xl md:text-3xl font-bold mb-6">Organisasi Siswa</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Wadah pengembangan potensi, karakter, dan kepemimpinan siswa
             </p>

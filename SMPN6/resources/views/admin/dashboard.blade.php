@@ -14,9 +14,9 @@
                 <span class="text-sm text-gray-500">Total</span>
             </div>
             <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['total_news'] }}</div>
-            <div class="text-sm text-gray-600">News Articles</div>
+            <div class="text-sm text-gray-600">Berita Sekolah</div>
             <div class="mt-3 text-xs text-green-600">
-                {{ $stats['published_news'] }} Published
+                {{ $stats['published_news'] }} Terpublikasi
             </div>
         </div>
 
@@ -28,7 +28,7 @@
                 <span class="text-sm text-gray-500">Total</span>
             </div>
             <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['total_galleries'] }}</div>
-            <div class="text-sm text-gray-600">Gallery Images</div>
+            <div class="text-sm text-gray-600">Galeri Foto</div>
         </div>
 
         <div class="bg-white rounded-xl shadow-md p-6">
@@ -82,8 +82,8 @@
     <!-- Recent News -->
     <div class="bg-white rounded-xl shadow-md p-6">
         <div class="flex justify-between items-center mb-6">
-            <h3 class="text-lg font-semibold text-gray-900">Recent News</h3>
-            <a href="{{ route('admin.news.index') }}" class="text-sm text-blue-600 hover:underline">View All →</a>
+            <h3 class="text-lg font-semibold text-gray-900">Berita Terbaru</h3>
+            <a href="{{ route('admin.news.index') }}" class="text-sm text-blue-600 hover:underline">Lihat Semua →</a>
         </div>
         @if($recent_news->count() > 0)
             <div class="space-y-4">
@@ -106,56 +106,9 @@
                 @endforeach
             </div>
         @else
-            <p class="text-gray-500 text-center py-8">No news articles yet. <a href="{{ route('admin.news.create') }}" class="text-blue-600 hover:underline">Create one</a></p>
+            <p class="text-gray-500 text-center py-8">Tidak ada berita.<a href="{{ route('admin.news.create') }}" class="text-blue-600 hover:underline">Create one</a></p>
         @endif
     </div>
-
-    <!-- Recent Registrations -->
-    {{-- <div class="bg-white rounded-xl shadow-md p-6">
-        <div class="flex justify-between items-center mb-6">
-            <h3 class="text-lg font-semibold text-gray-900">Recent Registrations</h3>
-            <a href="{{ route('admin.registrations.index') }}" class="text-sm text-blue-600 hover:underline">View All →</a>
-        </div>
-        @if($recent_registrations->count() > 0)
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b border-gray-200">
-                            <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Student Name</th>
-                            <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Grade</th>
-                            <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Date</th>
-                            <th class="text-left py-3 px-4 text-sm font-semibold text-gray-700">Status</th>
-                            <th class="text-right py-3 px-4 text-sm font-semibold text-gray-700">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($recent_registrations as $registration)
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                <td class="py-3 px-4 text-sm">{{ $registration->student_name }}</td>
-                                <td class="py-3 px-4 text-sm">{{ $registration->grade_level }}</td>
-                                <td class="py-3 px-4 text-sm text-gray-600">{{ $registration->created_at->format('M d, Y') }}</td>
-                                <td class="py-3 px-4">
-                                    <span class="text-xs px-3 py-1 rounded-full 
-                                        {{ $registration->status === 'pending' ? 'bg-yellow-100 text-yellow-700' : '' }}
-                                        {{ $registration->status === 'reviewed' ? 'bg-blue-100 text-blue-700' : '' }}
-                                        {{ $registration->status === 'accepted' ? 'bg-green-100 text-green-700' : '' }}
-                                        {{ $registration->status === 'rejected' ? 'bg-red-100 text-red-700' : '' }}">
-                                        {{ ucfirst($registration->status) }}
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 text-right">
-                                    <a href="{{ route('admin.registrations.show', $registration) }}" class="text-blue-600 hover:text-blue-700">
-                                        View →
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        @else
-            <p class="text-gray-500 text-center py-8">No registrations yet.</p>
-        @endif --}}
     </div>
 </div>
 @endsection
