@@ -11,7 +11,7 @@
         </div>
         <a href="{{ route('admin.achievement.create') }}" 
            class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center gap-2">
-            <i data-lucide="plus" class="w-5 h-5"></i>
+            <i class="fa-solid fa-plus"></i>
             <span>Tambah Prestasi</span>
         </a>
     </div>
@@ -20,7 +20,7 @@
 @if(session('success'))
     <div class="bg-green-50 border border-green-200 text-green-700 px-6 py-4 rounded-lg mb-6">
         <div class="flex items-center gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <i class="fa-solid fa-circle-check"></i>
             <span>{{ session('success') }}</span>
         </div>
     </div>
@@ -75,7 +75,7 @@
                     <div class="flex gap-2 pt-4 border-t border-[var(--color-neutral-200)]">
                         <a href="{{ route('admin.achievement.edit', $achievement) }}" 
                            class="flex-1 bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center gap-2">
-                            <i data-lucide="edit" class="w-4 h-4"></i>
+                            <i class="fa-solid fa-pencil"></i>
                             <span class="text-sm">Edit</span>
                         </a>
                         <form action="{{ route('admin.achievement.destroy', $achievement) }}" 
@@ -86,7 +86,7 @@
                             @method('DELETE')
                             <button type="submit" 
                                     class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors flex items-center justify-center gap-2">
-                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                <i class="fa-solid fa-trash"></i>
                                 <span class="text-sm">Hapus</span>
                             </button>
                         </form>
@@ -99,7 +99,7 @@
     <!-- Empty State -->
     <div class="bg-white rounded-lg shadow-md p-12 text-center">
         <div class="bg-[var(--color-neutral-100)] w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i data-lucide="trophy" class="w-12 h-12 text-[var(--color-neutral-400)]"></i>
+            <i class="fa-solid fa-trophy text-[var(--color-neutral-400)]"></i>
         </div>
         <h3 class="text-xl font-semibold text-[var(--color-neutral-900)] mb-2">
             Belum Ada Prestasi
@@ -109,7 +109,7 @@
         </p>
         <a href="{{ route('admin.achievement.create') }}" 
            class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
-            <i data-lucide="plus" class="w-5 h-5"></i>
+            <i class="fa-solid fa-plus"></i>
             <span>Tambah Prestasi Pertama</span>
         </a>
     </div>

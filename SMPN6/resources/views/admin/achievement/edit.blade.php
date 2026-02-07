@@ -7,7 +7,7 @@
     <div class="flex items-center gap-3 mb-4">
         <a href="{{ route('admin.achievement.index') }}" 
            class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
-            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            <i class="fa-solid fa-arrow-left"></i>
         </a>
         <h1>Tambah Prestasi Baru</h1>
     </div>
@@ -17,7 +17,7 @@
 @if ($errors->any())
     <div class="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-6">
         <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="alert-circle" class="w-5 h-5"></i>
+            <i class="fa-solid fa-circle-exclamation"></i>
             <span>Mohon perbaiki kesalahan berikut:</span>
         </div>
         <ul class="list-disc list-inside space-y-1 ml-8">
@@ -149,7 +149,7 @@
             <!-- Info -->
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <div class="flex items-start gap-3 mb-3">
-                    <i data-lucide="info" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                    <i class="fa-solid fa-lightbulb text-blue-600 flex-shrink-0 mt-0.5"></i>
                     <h4 class="text-blue-900">Informasi</h4>
                 </div>
                 <ul class="space-y-2 text-sm text-blue-800">
@@ -173,13 +173,13 @@
                 <button 
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-2 mb-3">
-                    <i data-lucide="save" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-floppy-disk"></i>
                     <span>Simpan Prestasi</span>
                 </button>
                 <a 
                     href="{{ route('admin.achievement.index') }}"
                     class="w-full bg-[var(--color-neutral-200)] text-[var(--color-neutral-700)] py-3 rounded-lg hover:bg-[var(--color-neutral-300)] transition-colors flex items-center justify-center gap-2">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-x"></i>
                     <span>Batal</span>
                 </a>
             </div>
