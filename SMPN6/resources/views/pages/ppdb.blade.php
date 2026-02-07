@@ -117,40 +117,70 @@
                     </div>
                     <h3>Jadwal Penting</h3>
                 </div>
+                
                 <ul class="space-y-4">
+                    <!-- Periode Pendaftaran -->
                     <li class="flex items-start gap-3">
                         <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Periode Pendaftaran</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">15 Januari - 31 Maret 2026</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">
+                                {{ $settings && $settings->ppdb_start_date && $settings->ppdb_end_date 
+                                    ? $settings->ppdb_start_date->format('d F Y') . ' - ' . $settings->ppdb_end_date->format('d F Y')
+                                    : '15 Januari - 31 Maret 2026' }}
+                            </div>
                         </div>
                     </li>
+
+                    <!-- Tes Masuk -->
                     <li class="flex items-start gap-3">
                         <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Tes Masuk</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">10-20 April 2026</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">
+                                {{ $settings && $settings->test_start_date && $settings->test_end_date 
+                                    ? $settings->test_start_date->format('d F Y') . ' - ' . $settings->test_end_date->format('d F Y')
+                                    : '10-20 April 2026' }}
+                            </div>
                         </div>
                     </li>
+
+                    <!-- Pengumuman Hasil -->
                     <li class="flex items-start gap-3">
                         <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Pengumuman Hasil</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">1 Mei 2026</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">
+                                {{ $settings && $settings->announcement_date 
+                                    ? $settings->announcement_date->format('d F Y')
+                                    : '1 Mei 2026' }}
+                            </div>
                         </div>
                     </li>
+
+                    <!-- Daftar Ulang -->
                     <li class="flex items-start gap-3">
                         <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Daftar Ulang</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">5-15 Mei 2026</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">
+                                {{ $settings && $settings->reregistration_start_date && $settings->reregistration_end_date 
+                                    ? $settings->reregistration_start_date->format('d F Y') . ' - ' . $settings->reregistration_end_date->format('d F Y')
+                                    : '5-15 Mei 2026' }}
+                            </div>
                         </div>
                     </li>
+
+                    <!-- Tahun Ajaran Dimulai -->
                     <li class="flex items-start gap-3">
                         <i class="fa-regular fa-calendar w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <div>
                             <div class="text-[var(--color-neutral-900)] mb-1">Tahun Ajaran Dimulai</div>
-                            <div class="text-sm text-[var(--color-neutral-700)]">15 Juli 2026</div>
+                            <div class="text-sm text-[var(--color-neutral-700)]">
+                                {{ $settings && $settings->academic_year_start 
+                                    ? $settings->academic_year_start->format('d F Y')
+                                    : '15 Juli 2026' }}
+                            </div>
                         </div>
                     </li>
                 </ul>

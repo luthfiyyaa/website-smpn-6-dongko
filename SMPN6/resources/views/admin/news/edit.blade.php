@@ -7,7 +7,7 @@
     <div class="flex items-center gap-3 mb-4">
         <a href="{{ route('admin.news.index') }}" 
            class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
-            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            <i class="fa-solid fa-arrow-left"></i>
         </a>
         <h1>Edit Berita</h1>
     </div>
@@ -17,8 +17,8 @@
 @if ($errors->any())
     <div class="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-6">
         <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="alert-circle" class="w-5 h-5"></i>
-            <span>Please correct the following errors:</span>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Mohon perbaiki kesalahan berikut:</span>
         </div>
         <ul class="list-disc list-inside space-y-1 ml-8">
             @foreach ($errors->all() as $error)
@@ -53,7 +53,7 @@
             <!-- Excerpt -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="excerpt" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Excerpt <span class="text-red-500">*</span>
+                    Kutipan <span class="text-red-500">*</span>
                 </label>
                 <textarea 
                     name="excerpt" 
@@ -61,8 +61,8 @@
                     rows="3"
                     required
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Brief summary of the article (shown in previews)">{{ old('excerpt', $news->excerpt) }}</textarea>
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Keep it short and engaging (150-200 characters)</p>
+                    placeholder="Berikan kesimpulan singkat berita (Tampil di layar depan)">{{ old('excerpt', $news->excerpt) }}</textarea>
+                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Buat singkat dan menarik</p>
             </div>
 
             <!-- Content -->
@@ -201,20 +201,20 @@
                 <button 
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-2 mb-3">
-                    <i data-lucide="save" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-floppy-disk"></i>
                     <span>Update Berita</span>
                 </button>
                 <a 
                     href="{{ route('admin.news.index') }}"
                     class="w-full bg-[var(--color-neutral-200)] text-[var(--color-neutral-700)] py-3 rounded-lg hover:bg-[var(--color-neutral-300)] transition-colors flex items-center justify-center gap-2 mb-3">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-x"></i>
                     <span>Cancel</span>
                 </a>
                 <a 
                     href="{{ route('news.detail', $news->id) }}"
                     target="_blank"
                     class="w-full bg-blue-100 text-blue-700 py-3 rounded-lg hover:bg-blue-200 transition-colors flex items-center justify-center gap-2">
-                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-link"></i>
                     <span>Lihat Halaman</span>
                 </a>
             </div>

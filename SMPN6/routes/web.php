@@ -5,8 +5,10 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\GalleryController;
-use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\Admin\SchoolSettingController;
+use App\Http\Controllers\Admin\FacilityController;
+use App\Http\Controllers\Admin\PpdbController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,6 @@ Route::get('/news', [PageController::class, 'news'])->name('news');
 Route::get('/news/{id}', [PageController::class, 'newsDetail'])->name('news.detail');
 Route::get('/facilities', [PageController::class, 'facilities'])->name('facilities');
 Route::get('/ppdb', [PageController::class, 'ppdb'])->name('ppdb');
-Route::post('/ppdb/submit', [PageController::class, 'submitRegistration'])->name('ppdb.submit');
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,14 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     
     // Gallery Management
     Route::resource('gallery', GalleryController::class);
+
+    // School Settings Routes
+    Route::get('/settings', [SchoolSettingController::class, 'index'])->name('settings.index');
+    Route::put('/settings', [SchoolSettingController::class, 'update'])->name('settings.update');
     
-    // Registration Management
-    Route::resource('registrations', AdminRegistrationController::class)->only(['index', 'show', 'update', 'destroy']);
+    // Facilities Routes
+    Route::resource('facilities', FacilityController::class);
+    Route::post('/facilities/update-order', [FacilityController::class, 'updateOrder'])->name('facilities.update-order');
+
+    Route::get('/ppdb-responses', [PpdbController::class, 'index'])->name('ppdb.index');
 });

@@ -7,7 +7,7 @@
     <div class="flex items-center gap-3 mb-4">
         <a href="{{ route('admin.gallery.index') }}" 
            class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
-            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            <i class="fa-solid fa-arrow-left"></i>
         </a>
         <h1>Edit Photo</h1>
     </div>
@@ -17,8 +17,8 @@
 @if ($errors->any())
     <div class="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-6">
         <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="alert-circle" class="w-5 h-5"></i>
-            <span>Please correct the following errors:</span>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Mohon perbaiki kesalahan berikut:</span>
         </div>
         <ul class="list-disc list-inside space-y-1 ml-8">
             @foreach ($errors->all() as $error)
@@ -38,7 +38,7 @@
             <!-- Current Image -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label class="block text-sm mb-3 text-[var(--color-neutral-900)]">
-                    Current Photo
+                    Foto Saat Ini
                 </label>
                 <img src="{{ asset('storage/' . $gallery->image) }}" 
                      alt="{{ $gallery->title }}"
@@ -52,14 +52,14 @@
                         value="1"
                         class="w-4 h-4 text-red-600 border-[var(--color-neutral-300)] rounded focus:ring-2 focus:ring-red-500"
                         onchange="toggleImageRemoval(this)">
-                    <span>Remove current photo</span>
+                    <span>Hapus foto saat ini</span>
                 </label>
             </div>
 
             <!-- Replace Image -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="image" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Replace Photo
+                    Ganti foto
                 </label>
                 <input 
                     type="file" 
@@ -68,7 +68,7 @@
                     accept="image/*"
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                     onchange="previewImage(event)">
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Upload a new photo to replace the current one</p>
+                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Unggah foto baru</p>
                 
                 <!-- Image Preview -->
                 <div id="imagePreview" class="mt-6 hidden">
@@ -80,7 +80,7 @@
             <!-- Title -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="title" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Photo Title <span class="text-red-500">*</span>
+                    Judul Foto <span class="text-red-500">*</span>
                 </label>
                 <input 
                     type="text" 
@@ -89,22 +89,21 @@
                     value="{{ old('title', $gallery->title) }}"
                     required
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Enter photo title">
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Give your photo a descriptive title</p>
+                    placeholder="Masukkan judul foto Anda">
+                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Beri judul yang menarik</p>
             </div>
 
             <!-- Description -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="description" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Description (Optional)
+                    Deskripsi (Optional)
                 </label>
                 <textarea 
                     name="description" 
                     id="description" 
                     rows="4"
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Brief description of the photo...">{{ old('description', $gallery->description) }}</textarea>
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Provide additional context about the photo</p>
+                    placeholder="Berikan deskripsi foto Anda...">{{ old('description', $gallery->description) }}</textarea>
             </div>
         </div>
 
@@ -112,16 +111,16 @@
         <div class="space-y-6">
             <!-- Category -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Category</h3>
+                <h3 class="mb-4">Kategori</h3>
                 <label for="category" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Select Category <span class="text-red-500">*</span>
+                    Pilih Kategori<span class="text-red-500">*</span>
                 </label>
                 <select 
                     name="category" 
                     id="category"
                     required
                     class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                    <option value="">Choose a category</option>
+                    <option value="">Pilih Kategori</option>
                     <option value="Campus" {{ old('category', $gallery->category) == 'Campus' ? 'selected' : '' }}>Campus</option>
                     <option value="Facilities" {{ old('category', $gallery->category) == 'Facilities' ? 'selected' : '' }}>Facilities</option>
                     <option value="Events" {{ old('category', $gallery->category) == 'Events' ? 'selected' : '' }}>Events</option>
@@ -144,7 +143,7 @@
                             class="w-5 h-5 text-[var(--color-primary)] border-[var(--color-neutral-300)] rounded focus:ring-2 focus:ring-[var(--color-primary)]">
                         <span class="text-[var(--color-neutral-900)]">Active</span>
                     </label>
-                    <p class="text-sm text-[var(--color-neutral-700)] ml-8 mt-1">Show this photo in the gallery</p>
+                    <p class="text-sm text-[var(--color-neutral-700)] ml-8 mt-1">Tampilkan foto ini di galeri</p>
                 </div>
 
                 <!-- Display Order -->
@@ -165,14 +164,14 @@
 
             <!-- Meta Information -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Information</h3>
+                <h3 class="mb-4">Informasi</h3>
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between">
-                        <span class="text-[var(--color-neutral-700)]">Created:</span>
+                        <span class="text-[var(--color-neutral-700)]">Dibuat:</span>
                         <span class="text-[var(--color-neutral-900)]">{{ $gallery->created_at->format('M d, Y') }}</span>
                     </div>
                     <div class="flex justify-between">
-                        <span class="text-[var(--color-neutral-700)]">Updated:</span>
+                        <span class="text-[var(--color-neutral-700)]">Diperbarui:</span>
                         <span class="text-[var(--color-neutral-900)]">{{ $gallery->updated_at->format('M d, Y') }}</span>
                     </div>
                     <div class="flex justify-between">
@@ -193,13 +192,13 @@
                 <button 
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-2 mb-3">
-                    <i data-lucide="save" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-floppy-disk"></i>
                     <span>Update Photo</span>
                 </button>
                 <a 
                     href="{{ route('admin.gallery.index') }}"
                     class="w-full bg-[var(--color-neutral-200)] text-[var(--color-neutral-700)] py-3 rounded-lg hover:bg-[var(--color-neutral-300)] transition-colors flex items-center justify-center gap-2">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                    <i class="fa-solid fa-x"></i>
                     <span>Cancel</span>
                 </a>
             </div>

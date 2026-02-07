@@ -9,7 +9,7 @@
         <div class="bg-white rounded-xl shadow-md p-6">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-blue-100 p-3 rounded-lg">
-                    <i data-lucide="newspaper" class="w-6 h-6 text-blue-600"></i>
+                    <i class="fa-solid fa-newspaper text-blue-600"></i>
                 </div>
                 <span class="text-sm text-gray-500">Total</span>
             </div>
@@ -23,37 +23,12 @@
         <div class="bg-white rounded-xl shadow-md p-6">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-green-100 p-3 rounded-lg">
-                    <i data-lucide="images" class="w-6 h-6 text-green-600"></i>
+                    <i class="fa-solid fa-images text-green-600"></i>
                 </div>
                 <span class="text-sm text-gray-500">Total</span>
             </div>
             <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['total_galleries'] }}</div>
             <div class="text-sm text-gray-600">Gallery Images</div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6">
-            <div class="flex items-center justify-between mb-4">
-                <div class="bg-yellow-100 p-3 rounded-lg">
-                    <i data-lucide="clock" class="w-6 h-6 text-yellow-600"></i>
-                </div>
-                <span class="text-sm text-gray-500">Pending</span>
-            </div>
-            {{-- <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['pending_registrations'] }}</div> --}}
-            <div class="text-sm text-gray-600">Applications</div>
-            <a href="{{ route('admin.registrations.index', ['status' => 'pending']) }}" class="mt-3 text-xs text-blue-600 hover:underline">
-                Review Now →
-            </a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6">
-            <div class="flex items-center justify-between mb-4">
-                <div class="bg-purple-100 p-3 rounded-lg">
-                    <i data-lucide="users" class="w-6 h-6 text-purple-600"></i>
-                </div>
-                <span class="text-sm text-gray-500">Total</span>
-            </div>
-            {{-- <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['total_registrations'] }}</div> --}}
-            <div class="text-sm text-gray-600">Registrations</div>
         </div>
     </div>
 
@@ -63,7 +38,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <a href="{{ route('admin.news.create') }}" class="flex items-center gap-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all group">
                 <div class="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-200">
-                    <i data-lucide="plus" class="w-6 h-6 text-blue-600"></i>
+                    <i class="fa-solid fa-plus text-blue-600"></i>
                 </div>
                 <div>
                     <div class="font-semibold text-gray-900">Create News</div>
@@ -73,21 +48,11 @@
 
             <a href="{{ route('admin.gallery.create') }}" class="flex items-center gap-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-green-500 hover:bg-green-50 transition-all group">
                 <div class="bg-green-100 p-3 rounded-lg group-hover:bg-green-200">
-                    <i data-lucide="image-plus" class="w-6 h-6 text-green-600"></i>
+                    <i class="fa-solid fa-plus text-green-600"></i>
                 </div>
                 <div>
                     <div class="font-semibold text-gray-900">Upload Photo</div>
                     <div class="text-sm text-gray-600">Add to gallery</div>
-                </div>
-            </a>
-
-            <a href="{{ route('admin.registrations.index') }}" class="flex items-center gap-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-all group">
-                <div class="bg-purple-100 p-3 rounded-lg group-hover:bg-purple-200">
-                    <i data-lucide="inbox" class="w-6 h-6 text-purple-600"></i>
-                </div>
-                <div>
-                    <div class="font-semibold text-gray-900">View Applications</div>
-                    <div class="text-sm text-gray-600">Manage registrations</div>
                 </div>
             </a>
         </div>
@@ -114,7 +79,7 @@
                             </div>
                         </div>
                         <a href="{{ route('admin.news.edit', $news) }}" class="text-blue-600 hover:text-blue-700 ml-4">
-                            <i data-lucide="edit" class="w-4 h-4"></i>
+                            <i class="fa-solid fa-pen-to-square"></i>
                         </a>
                     </div>
                 @endforeach

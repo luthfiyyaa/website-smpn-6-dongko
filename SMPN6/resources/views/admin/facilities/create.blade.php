@@ -1,17 +1,17 @@
 @extends('layouts.admin')
 
-@section('title', 'Upload Photo')
+@section('title', 'Tambah Fasilitas')
 
 @section('content')
 <div class="mb-8">
     <div class="flex items-center gap-3 mb-4">
-        <a href="{{ route('admin.gallery.index') }}" 
+        <a href="{{ route('admin.facilities.index') }}" 
            class="text-[var(--color-neutral-700)] hover:text-[var(--color-primary)] transition-colors">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
-        <h1>Upload Foto</h1>
+        <h1>Tambah Fasilitas Baru</h1>
     </div>
-    <p class="text-[var(--color-neutral-700)]">Tambahkan foto baru ke Galeri</p>
+    <p class="text-[var(--color-neutral-700)]">Tambahkan fasilitas baru ke dalam galeri sekolah</p>
 </div>
 
 @if ($errors->any())
@@ -28,16 +28,16 @@
     </div>
 @endif
 
-<form method="POST" action="{{ route('admin.gallery.store') }}" enctype="multipart/form-data">
+<form action="{{ route('admin.facilities.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
     <div class="grid lg:grid-cols-3 gap-6">
         <!-- Main Content -->
         <div class="lg:col-span-2 space-y-6">
-            <!-- Image Upload -->
+            <!-- Gambar Fasilitas -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="image" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Upload Foto <span class="text-red-500">*</span>
+                    Gambar Fasilitas <span class="text-red-500">*</span>
                 </label>
                 <input 
                     type="file" 
@@ -47,7 +47,7 @@
                     required
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                     onchange="previewImage(event)">
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Recommended: 1200x800px, JPG or PNG, max 5MB</p>
+                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Rekomendasi: 1200x800px, JPG atau PNG, max 2MB</p>
                 
                 <!-- Image Preview -->
                 <div id="imagePreview" class="mt-6 hidden">
@@ -56,60 +56,42 @@
                 </div>
             </div>
 
-            <!-- Title -->
+            <!-- Nama Fasilitas -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <label for="title" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Judul Foto<span class="text-red-500">*</span>
+                <label for="name" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
+                    Nama Fasilitas <span class="text-red-500">*</span>
                 </label>
                 <input 
                     type="text" 
-                    name="title" 
-                    id="title" 
-                    value="{{ old('title') }}"
+                    name="name" 
+                    id="name" 
+                    value="{{ old('name') }}"
                     required
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Masukkan judul foto Anda">
-                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Beri judul yang menarik</p>
+                    placeholder="Contoh: Ruang Kelas">
+                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Masukkan nama fasilitas yang jelas dan deskriptif</p>
             </div>
 
-            <!-- Description -->
+            <!-- Deskripsi -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <label for="description" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Deskripsi (Optional)
+                    Deskripsi (Opsional)
                 </label>
                 <textarea 
                     name="description" 
                     id="description" 
                     rows="4"
                     class="w-full px-4 py-3 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
-                    placeholder="Berikan deskripsi foto Anda...">{{ old('description') }}</textarea>
+                    placeholder="Masukkan deskripsi singkat tentang fasilitas...">{{ old('description') }}</textarea>
+                <p class="text-sm text-[var(--color-neutral-700)] mt-2">Berikan informasi tambahan tentang fasilitas ini</p>
             </div>
         </div>
 
         <!-- Sidebar -->
         <div class="space-y-6">
-            <!-- Category -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Kategori</h3>
-                <label for="category" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                    Pilih Kategori<span class="text-red-500">*</span>
-                </label>
-                <select 
-                    name="category" 
-                    id="category"
-                    required
-                    class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                    <option value="">Pilih Kategori</option>
-                    <option value="Campus" {{ old('category') == 'Campus' ? 'selected' : '' }}>Campus</option>
-                    <option value="Facilities" {{ old('category') == 'Facilities' ? 'selected' : '' }}>Facilities</option>
-                    <option value="Events" {{ old('category') == 'Events' ? 'selected' : '' }}>Events</option>
-                    <option value="Activities" {{ old('category') == 'Activities' ? 'selected' : '' }}>Activities</option>
-                </select>
-            </div>
-
             <!-- Display Options -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="mb-4">Display Options</h3>
+                <h3 class="mb-4">Opsi Tampilan</h3>
                 
                 <!-- Active Status -->
                 <div class="mb-4">
@@ -120,15 +102,15 @@
                             value="1"
                             {{ old('is_active', true) ? 'checked' : '' }}
                             class="w-5 h-5 text-[var(--color-primary)] border-[var(--color-neutral-300)] rounded focus:ring-2 focus:ring-[var(--color-primary)]">
-                        <span class="text-[var(--color-neutral-900)]">Active</span>
+                        <span class="text-[var(--color-neutral-900)]">Aktif</span>
                     </label>
-                    <p class="text-sm text-[var(--color-neutral-700)] ml-8 mt-1">Tampilkan foto ini di galeri</p>
+                    <p class="text-sm text-[var(--color-neutral-700)] ml-8 mt-1">Tampilkan fasilitas ini di website</p>
                 </div>
 
                 <!-- Display Order -->
                 <div>
                     <label for="order" class="block text-sm mb-2 text-[var(--color-neutral-900)]">
-                        Display Order
+                        Urutan Tampilan
                     </label>
                     <input 
                         type="number" 
@@ -137,7 +119,7 @@
                         value="{{ old('order', 0) }}"
                         min="0"
                         class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                    <p class="text-sm text-[var(--color-neutral-700)] mt-1">Lower numbers appear first (0 = default)</p>
+                    <p class="text-sm text-[var(--color-neutral-700)] mt-1">Angka lebih kecil muncul lebih dulu (0 = otomatis)</p>
                 </div>
             </div>
 
@@ -145,20 +127,24 @@
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <div class="flex items-start gap-3 mb-3">
                     <i class="fa-solid fa-lightbulb text-blue-600 flex-shrink-0 mt-0.5"></i>
-                    <h4 class="text-blue-900">Photo Tips</h4>
+                    <h4 class="text-blue-900">Tips Fasilitas</h4>
                 </div>
                 <ul class="space-y-2 text-sm text-blue-800">
                     <li class="flex items-start gap-2">
                         <span>•</span>
-                        <span>Gunakan foto dengan kualitas tinggi</span>
+                        <span>Gunakan gambar berkualitas tinggi</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <span>•</span>
-                        <span>Gunakan judul yang menarik</span>
+                        <span>Pastikan pencahayaan gambar baik</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <span>•</span>
-                        <span>Atur foto Anda dengan kategori</span>
+                        <span>Nama fasilitas harus jelas dan singkat</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span>•</span>
+                        <span>Deskripsi membantu pengunjung memahami fasilitas</span>
                     </li>
                 </ul>
             </div>
@@ -168,11 +154,11 @@
                 <button 
                     type="submit"
                     class="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-2 mb-3">
-                    <i class="fa-solid fa-plus"></i>
-                    <span>Upload Photo</span>
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <span>Simpan Fasilitas</span>
                 </button>
                 <a 
-                    href="{{ route('admin.gallery.index') }}"
+                    href="{{ route('admin.facilities.index') }}"
                     class="w-full bg-[var(--color-neutral-200)] text-[var(--color-neutral-700)] py-3 rounded-lg hover:bg-[var(--color-neutral-300)] transition-colors flex items-center justify-center gap-2">
                     <i class="fa-solid fa-x"></i>
                     <span>Cancel</span>
@@ -188,9 +174,9 @@
 function previewImage(event) {
     const file = event.target.files[0];
     if (file) {
-        // Check file size (5MB max)
-        if (file.size > 5 * 1024 * 1024) {
-            alert('File size must be less than 5MB');
+        // Check file size (2MB max)
+        if (file.size > 2 * 1024 * 1024) {
+            alert('Ukuran file harus kurang dari 2MB');
             event.target.value = '';
             return;
         }

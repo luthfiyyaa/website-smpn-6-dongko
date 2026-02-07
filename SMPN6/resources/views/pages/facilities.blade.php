@@ -27,100 +27,31 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Facility 1: Academic Buildings -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/ruang-kelas.png') }}" 
-                         alt="Academic Buildings" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            @forelse($facilities as $facility)
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                    <div class="h-80 md:h-96 overflow-hidden">
+                        <img src="{{ asset('storage/' . $facility->image) }}" 
+                             alt="{{ $facility->name }}" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-semibold text-center">{{ $facility->name }}</h3>
+                        @if($facility->description)
+                            <p class="text-center text-[var(--color-neutral-700)] mt-2">
+                                {{ $facility->description }}
+                            </p>
+                        @endif
+                    </div>
                 </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Ruang Kelas</h3>
+            @empty
+                <!-- Fallback jika belum ada data -->
+                <div class="col-span-2 text-center py-12">
+                    <div class="bg-[var(--color-neutral-100)] w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-building text-4xl text-[var(--color-neutral-400)]"></i>
+                    </div>
+                    <p class="text-[var(--color-neutral-600)]">Belum ada fasilitas yang ditampilkan</p>
                 </div>
-            </div>
-
-            <!-- Facility 2: Science Labs -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/laboratorium.png') }}" 
-                         alt="Science & Technology Labs" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Laboratorium</h3>
-                </div>
-            </div>
-
-            <!-- Facility 3: Library -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/perpustakaan.png') }}" 
-                         alt="Library & Media Center" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Perpustakaan</h3>
-                </div>
-            </div>
-
-            <!-- Facility 4: Sports Complex -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/lapangan.png') }}" 
-                         alt="Sports Complex" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Lapangan</h3>
-                </div>
-            </div>
-
-            <!-- Facility 5: Computer Lab -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/uks.png') }}" 
-                         alt="Computer Lab" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Unit Kesehatan Siswa</h3>
-                </div>
-            </div>
-
-            <!-- Facility 6: Cafeteria -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/ruang-bk.png') }}" 
-                         alt="Cafeteria" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Ruang Bimbingan Konseling</h3>
-                </div>
-            </div>
-
-            <!-- Facility 7: Arts Studio -->
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/ruang-kelas-depan.png') }}" 
-                         alt="Arts Studios" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Ruang Kelas Depan</h3>
-                </div>
-            </div>
-
-            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="h-80 md:h-96 overflow-hidden">
-                    <img src="{{ asset('storage/facilities/kamar-mandi.png') }}" 
-                         alt="Auditorium" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex justify-center">
-                    <h3 class="text-2xl font-semibold text-center">Kamar Mandi</h3>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>

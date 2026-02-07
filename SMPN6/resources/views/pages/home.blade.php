@@ -97,47 +97,56 @@
             <div class="grid md:grid-cols-2 gap-0 items-center">
                 <!-- Image -->
                 <div class="h-full">
-                    <img 
-                        src="{{ asset('storage/assets/foto-kepsek.jpeg') }}" 
-                        alt="Principal"
-                        class="w-full h-full object-cover min-h-[500px]">
+                    @if($settings && $settings->principal_photo)
+                        <img 
+                            src="{{ asset('storage/' . $settings->principal_photo) }}" 
+                            alt="{{ $settings->principal_name ?? 'Principal' }}"
+                            class="w-full h-full object-cover min-h-[500px]">
+                    @else
+                        <!-- Fallback image jika belum ada -->
+                        <img 
+                            src="{{ asset('storage/assets/foto-kepsek.jpeg') }}" 
+                            alt="Principal"
+                            class="w-full h-full object-cover min-h-[500px]">
+                    @endif
                 </div>
                 
                 <!-- Content -->
                 <div class="p-10 lg:p-12">
                     <h2 class="mb-6 text-4xl md:text-3xl font-bold">Sambutan Kepala Sekolah</h2>
                     
-                    <div class="space-y-5 text-[var(--color-neutral-700)] leading-relaxed">
-                        <p>Assalamu'alaikum warahmatullahi wabarakatuh</p>
+                    @if($settings && $settings->principal_message)
+                        <div class="space-y-5 text-[var(--color-neutral-700)] leading-relaxed">
+                            {!! nl2br(e($settings->principal_message)) !!}
+                        </div>
                         
-                        <p>
-                            Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya, 
-                            sehingga sekolah kami dapat menghadirkan situs resmi dengan domain sch.id sebagai bagian 
-                            dari transformasi digital di bidang pendidikan. Kehadiran website ini merupakan bentuk 
-                            komitmen kami dalam memberikan layanan informasi yang cepat, akurat, dan transparan kepada 
-                            seluruh warga sekolah, orang tua, alumni, dan masyarakat umum. Website ini juga menjadi 
-                            jendela utama untuk memperkenalkan profil sekolah, visi misi, program unggulan, serta 
-                            capaian prestasi siswa dan guru kepada publik.
-                        </p>
+                        <div class="mt-8 pt-6 border-t border-[var(--color-neutral-200)]">
+                            <p class="text-[var(--color-neutral-900)] font-semibold">
+                                {{ $settings->principal_name ?? 'Kepala Sekolah' }}
+                            </p>
+                            <p class="text-[var(--color-neutral-700)] mt-1">
+                                {{ $settings->principal_title ?? 'Kepala Sekolah SMP Negeri 6 Dongko' }}
+                            </p>
+                        </div>
+                    @else
+                        <!-- Fallback content jika belum ada data -->
+                        <div class="space-y-5 text-[var(--color-neutral-700)] leading-relaxed">
+                            <p>Assalamu'alaikum warahmatullahi wabarakatuh</p>
+                            
+                            <p>
+                                Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya, 
+                                sehingga sekolah kami dapat menghadirkan situs resmi dengan domain sch.id sebagai bagian 
+                                dari transformasi digital di bidang pendidikan.
+                            </p>
+                            
+                            <p>Wassalamu'alaikum warahmatullahi wabarakatuh</p>
+                        </div>
                         
-                        <p>
-                            Melalui website ini, kami menyediakan berbagai fasilitas yang dapat dimanfaatkan secara 
-                            maksimal, antara lain informasi akademik, agenda kegiatan sekolah, pengumuman penting, 
-                            galeri foto dan video, hingga layanan administrasi digital seperti SPMB (Sistem Penerimaan 
-                            Murid Baru) secara online. Selain itu, guru dan siswa juga dapat mengakses bahan terbuka 
-                            dan media pembelajaran interaktif yang terintegrasi dengan platform digital sekolah. Kami 
-                            berharap, kehadiran website ini dapat memperkuat sinergi antara sekolah dan masyarakat, 
-                            serta menjadi sarana komunikasi dan kolaborasi yang produktif demi terwujudnya pendidikan 
-                            yang unggul, adaptif, dan berdaya saing.
-                        </p>
-                        
-                        <p>Wassalamu'alaikum warahmatullahi wabarakatuh</p>
-                    </div>
-                    
-                    <div class="mt-8 pt-6 border-t border-[var(--color-neutral-200)]">
-                        <p class="text-[var(--color-neutral-900)] font-semibold">Wardoyo, S.Kom</p>
-                        <p class="text-[var(--color-neutral-700)] mt-1">Kepala Sekolah SMP Negeri 6 Dongko</p>
-                    </div>
+                        <div class="mt-8 pt-6 border-t border-[var(--color-neutral-200)]">
+                            <p class="text-[var(--color-neutral-900)] font-semibold">Wardoyo, S.Kom</p>
+                            <p class="text-[var(--color-neutral-700)] mt-1">Kepala Sekolah SMP Negeri 6 Dongko</p>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

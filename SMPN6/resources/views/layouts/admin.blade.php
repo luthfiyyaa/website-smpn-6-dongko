@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="{{ asset('storage\assets\logo.png') }}" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Dashboard') - SMPN 6 Dongko</title>
@@ -29,9 +31,8 @@
             background-color: var(--color-neutral-50);
         }
     </style>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     
     @stack('styles')
 </head>
@@ -42,7 +43,7 @@
             <div class="p-6">
                 <a href="{{ route('home') }}" class="flex items-center gap-3 mb-10">
                     <div class="bg-[var(--color-primary)] p-2 rounded-lg">
-                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div>
                         <div class="font-semibold">SMPN 6 Dongko</div>
@@ -53,39 +54,51 @@
                 <nav class="space-y-2">
                     <a href="{{ route('admin.dashboard') }}" 
                        class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.dashboard') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
-                        <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                        <i class="fa-solid fa-gauge"></i>
                         <span>Dashboard</span>
                     </a>
                     
                     <a href="{{ route('admin.news.index') }}" 
                        class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.news.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
-                        <i data-lucide="newspaper" class="w-5 h-5"></i>
-                        <span>News</span>
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span>Berita</span>
                     </a>
                     
                     <a href="{{ route('admin.gallery.index') }}" 
                        class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.gallery.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
-                        <i data-lucide="images" class="w-5 h-5"></i>
-                        <span>Gallery</span>
+                        <i class="fa-solid fa-images"></i>
+                        <span>Galeri</span>
                     </a>
-                    
-                    <a href="{{ route('admin.registrations.index') }}" 
-                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.registrations.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
-                        <i data-lucide="users" class="w-5 h-5"></i>
-                        <span>Registrations</span>
+
+                    <a href="{{ route('admin.settings.index') }}" 
+                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.settings.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Pengaturan</span>
+                    </a>
+
+                    <a href="{{ route('admin.facilities.index') }}" 
+                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.facilities.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
+                        <i class="fa-solid fa-building"></i>
+                        <span>Fasilitas</span>
+                    </a>
+
+                    <a href="{{ route('admin.ppdb.index') }}" 
+                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.ppdb.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Data Siswa</span>
                     </a>
 
                     <div class="pt-6 mt-6 border-t border-[var(--color-neutral-800)]">
                         <a href="{{ route('home') }}" 
                            class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[var(--color-neutral-800)] transition-colors">
-                            <i data-lucide="arrow-left" class="w-5 h-5"></i>
-                            <span>Back to Website</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Kembali ke Website</span>
                         </a>
                         
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button type="submit" class="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[var(--color-neutral-800)] transition-colors">
-                                <i data-lucide="log-out" class="w-5 h-5"></i>
+                                <i class="fa-solid fa-right-from-bracket"></i>
                                 <span>Logout</span>
                             </button>
                         </form>
@@ -113,14 +126,14 @@
             <main class="p-8">
                 @if(session('success'))
                     <div class="bg-green-50 border border-green-200 text-green-700 px-6 py-4 rounded-lg mb-6 flex items-center gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                         <span>{{ session('success') }}</span>
                     </div>
                 @endif
 
                 @if(session('error'))
                     <div class="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-6 flex items-center gap-3">
-                        <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
                         <span>{{ session('error') }}</span>
                     </div>
                 @endif
@@ -129,10 +142,6 @@
             </main>
         </div>
     </div>
-    
-    <script>
-        lucide.createIcons();
-    </script>
     
     @stack('scripts')
 </body>

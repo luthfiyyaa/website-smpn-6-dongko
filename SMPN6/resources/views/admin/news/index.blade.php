@@ -10,21 +10,21 @@
     </div>
     <a href="{{ route('admin.news.create') }}" 
        class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors inline-flex items-center justify-center gap-2">
-        <i data-lucide="plus" class="w-5 h-5"></i>
+        <i class="fa-solid fa-plus"></i>
         <span>Buat Berita</span>
     </a>
 </div>
 
 @if(session('success'))
     <div class="bg-green-50 border border-green-200 text-green-700 px-6 py-4 rounded-lg mb-6 flex items-center gap-3">
-        <i data-lucide="check-circle" class="w-5 h-5"></i>
+        <i class="fa-solid fa-circle-check"></i>
         <span>{{ session('success') }}</span>
     </div>
 @endif
 
 @if(session('error'))
     <div class="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-6 flex items-center gap-3">
-        <i data-lucide="alert-circle" class="w-5 h-5"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
         <span>{{ session('error') }}</span>
     </div>
 @endif
@@ -33,16 +33,16 @@
 <div class="bg-white rounded-lg shadow-md p-6 mb-6">
     <form method="GET" action="{{ route('admin.news.index') }}" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
-            <label class="block text-sm mb-2 text-[var(--color-neutral-700)]">Search</label>
+            <label class="block text-sm mb-2 text-[var(--color-neutral-700)]">Cari</label>
             <input 
                 type="text" 
                 name="search" 
                 value="{{ request('search') }}"
-                placeholder="Search by title..."
+                placeholder="Cari berdasarkan judul..."
                 class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
         </div>
         <div>
-            <label class="block text-sm mb-2 text-[var(--color-neutral-700)]">Category</label>
+            <label class="block text-sm mb-2 text-[var(--color-neutral-700)]">Kategori</label>
             <select 
                 name="category"
                 class="w-full px-4 py-2 border border-[var(--color-neutral-300)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
@@ -104,7 +104,7 @@
                                          class="w-20 h-14 object-cover rounded-lg">
                                 @else
                                     <div class="w-20 h-14 bg-[var(--color-neutral-200)] rounded-lg flex items-center justify-center">
-                                        <i data-lucide="image" class="w-6 h-6 text-[var(--color-neutral-400)]"></i>
+                                        <i class="fa-solid fa-images text-[var(--color-neutral-400)]"></i>
                                     </div>
                                 @endif
                             </td>
@@ -125,12 +125,12 @@
                             <td class="px-6 py-4">
                                 @if($item->is_published)
                                     <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-green-100 text-green-700">
-                                        <i data-lucide="check-circle" class="w-3 h-3"></i>
+                                        <i class="fa-solid fa-circle-check"></i>
                                         Diunggah
                                     </span>
                                 @else
                                     <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-yellow-100 text-yellow-700">
-                                        <i data-lucide="clock" class="w-3 h-3"></i>
+                                        <i class="fa-solid fa-clock"></i>
                                         Draft
                                     </span>
                                 @endif
@@ -144,12 +144,12 @@
                                        target="_blank"
                                        class="text-blue-600 hover:text-blue-700 p-2 hover:bg-blue-50 rounded-lg transition-colors"
                                        title="Lihat">
-                                        <i data-lucide="eye" class="w-4 h-4"></i>
+                                        <i class="fa-solid fa-eye"></i>
                                     </a>
                                     <a href="{{ route('admin.news.edit', $item->id) }}" 
                                        class="text-green-600 hover:text-green-700 p-2 hover:bg-green-50 rounded-lg transition-colors"
                                        title="Edit">
-                                        <i data-lucide="pencil" class="w-4 h-4"></i>
+                                        <i class="fa-solid fa-pencil"></i>
                                     </a>
                                     <form method="POST" 
                                           action="{{ route('admin.news.destroy', $item->id) }}" 
@@ -161,7 +161,7 @@
                                             type="submit"
                                             class="text-red-600 hover:text-red-700 p-2 hover:bg-red-50 rounded-lg transition-colors"
                                             title="Delete">
-                                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                            <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </form>
                                 </div>
@@ -180,7 +180,7 @@
         <!-- Empty State -->
         <div class="text-center py-16">
             <div class="bg-[var(--color-neutral-100)] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="newspaper" class="w-10 h-10 text-[var(--color-neutral-400)]"></i>
+                <i class="fa-solid fa-newspaper w-10 h-10 text-[var(--color-neutral-400)]"></i>
             </div>
             <h3 class="mb-2 text-[var(--color-neutral-900)]">Tidak ada berita</h3>
             <p class="text-[var(--color-neutral-700)] mb-6">
@@ -188,7 +188,7 @@
             </p>
             <a href="{{ route('admin.news.create') }}" 
                class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors">
-                <i data-lucide="plus" class="w-5 h-5"></i>
+                <i class="fa-solid fa-plus"></i>
                 <span>Buat Berita</span>
             </a>
         </div>

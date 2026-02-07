@@ -6,16 +6,18 @@ use App\Models\Ppdb;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Gallery;
-use App\Models\Registration;
+use App\Models\SchoolSetting; 
+use App\Models\Facility;
 
 class PageController extends Controller
 {
     public function home()
     {
         $latestNews = News::published()->latest()->take(3)->get();
-        $galleries = Gallery::active()->ordered()->take(4)->get();
+        $galleries = Gallery::active()->ordered()->take(8)->get();
+        $settings = SchoolSetting::first();
         
-        return view('pages.home', compact('latestNews', 'galleries'));
+        return view('pages.home', compact('latestNews', 'galleries', 'settings'));
     }
 
     public function profile()
@@ -54,31 +56,14 @@ class PageController extends Controller
 
     public function facilities()
     {
+        $facilities = Facility::active()->ordered()->get();
         $galleries = Gallery::active()->ordered()->get();
-        return view('pages.facilities', compact('galleries'));
+        return view('pages.facilities', compact('facilities','galleries'));
     }
 
     public function ppdb()
     {
-        return view('pages.ppdb');
-    }
-
-    public function submitRegistration(Request $request)
-    {
-        $validated = $request->validate([
-            'student_name' => 'required|max:255',
-            'parent_name' => 'required|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'required|max:20',
-            'birth_date' => 'required|date',
-            'address' => 'required',
-            'grade_level' => 'required',
-            'previous_school' => 'nullable|max:255',
-            'message' => 'nullable',
-        ]);
-
-        Ppdb::create($validated);
-
-        return redirect()->route('ppdb')->with('success', 'Registration submitted successfully! We will contact you soon.');
+        $settings = SchoolSetting::first();
+        return view('pages.ppdb', compact('settings'));
     }
 }
