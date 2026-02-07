@@ -35,67 +35,28 @@
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Prestasi 1 -->
-            <div class="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-yellow-500">
-                <div class="bg-yellow-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <i class="fas fa-pen-fancy text-3xl text-yellow-600"></i>
-                </div>
-                <div class="bg-yellow-600 text-white text-center py-2 rounded-lg mb-4">
-                    <span class="font-bold">Juara 1</span>
-                </div>
-                <h4 class="font-bold text-center mb-2 text-gray-800">Lomba Kaligrafi</h4>
-                <p class="text-sm text-center text-gray-600">
-                    Tingkat Kecamatan Dongko
-                </p>
-                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2024</p>
+        @if($achievements->count() > 0)
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                @foreach($achievements as $index => $achievement)
+                    @php
+                        $style = $achievement->getColorAndIcon($index);
+                    @endphp
+                    <div class="bg-gradient-to-br {{ $style['gradient'] }} rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 {{ $style['border'] }}">
+                        <div class="{{ $style['icon_bg'] }} w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-{{ $style['icon'] }} text-3xl {{ $style['icon_text'] }}"></i>
+                        </div>
+                        <div class="{{ $style['badge_bg'] }} text-white text-center py-2 rounded-lg mb-4">
+                            <span class="font-bold">{{ $achievement->achievement }}</span>
+                        </div>
+                        <h4 class="font-bold text-center mb-2 text-gray-800">{{ $achievement->title }}</h4>
+                        <p class="text-sm text-center text-gray-600">
+                            {{ $achievement->level }}
+                        </p>
+                        <p class="text-xs text-center text-gray-500 mt-2">Tahun {{ $achievement->year }}</p>
+                    </div>
+                @endforeach
             </div>
-
-            <!-- Prestasi 2 -->
-            <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-green-500">
-                <div class="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <i class="fas fa-heartbeat text-3xl text-green-600"></i>
-                </div>
-                <div class="bg-green-600 text-white text-center py-2 rounded-lg mb-4">
-                    <span class="font-bold">Peringkat 6</span>
-                </div>
-                <h4 class="font-bold text-center mb-2 text-gray-800">Lomba Senam</h4>
-                <p class="text-sm text-center text-gray-600">
-                    Tingkat Provinsi Jawa Timur
-                </p>
-                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2025</p>
-            </div>
-
-            <!-- Prestasi 3 -->
-            <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-500">
-                <div class="bg-purple-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <i class="fas fa-palette text-3xl text-purple-600"></i>
-                </div>
-                <div class="bg-purple-600 text-white text-center py-2 rounded-lg mb-4">
-                    <span class="font-bold">Juara Harapan 2</span>
-                </div>
-                <h4 class="font-bold text-center mb-2 text-gray-800">Mewarnai Wayang</h4>
-                <p class="text-sm text-center text-gray-600">
-                    Tingkat Kabupaten Trenggalek
-                </p>
-                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2024</p>
-            </div>
-
-            <!-- Prestasi 4 -->
-            <div class="bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-red-500">
-                <div class="bg-red-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <i class="fas fa-music text-3xl text-red-600"></i>
-                </div>
-                <div class="bg-red-600 text-white text-center py-2 rounded-lg mb-4">
-                    <span class="font-bold">Juara Harapan 2</span>
-                </div>
-                <h4 class="font-bold text-center mb-2 text-gray-800">Lomba Macapat</h4>
-                <p class="text-sm text-center text-gray-600">
-                    Tingkat Kecamatan Dongko
-                </p>
-                <p class="text-xs text-center text-gray-500 mt-2">Tahun 2023</p>
-            </div>
-        </div>
+        @endif
     </div>
 </section>
 

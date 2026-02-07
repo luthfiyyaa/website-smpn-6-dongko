@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\Gallery;
 use App\Models\SchoolSetting; 
 use App\Models\Facility;
+use App\Models\Achievement;
 
 class PageController extends Controller
 {
@@ -16,8 +17,9 @@ class PageController extends Controller
         $latestNews = News::published()->latest()->take(3)->get();
         $galleries = Gallery::active()->ordered()->take(8)->get();
         $settings = SchoolSetting::first();
+        $achievements = Achievement::active()->ordered()->take(4)->get();
         
-        return view('pages.home', compact('latestNews', 'galleries', 'settings'));
+        return view('pages.home', compact('latestNews', 'galleries', 'settings', 'achievements'));
     }
 
     public function profile()
@@ -32,7 +34,8 @@ class PageController extends Controller
 
     public function studentAffairs()
     {
-        return view('pages.student-affairs');
+        $achievements = Achievement::active()->ordered()->get();
+        return view('pages.student-affairs', compact('achievements'));
     }
 
     public function news()

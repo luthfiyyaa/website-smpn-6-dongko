@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\Admin\SchoolSettingController;
 use App\Http\Controllers\Admin\FacilityController;
-use App\Http\Controllers\Admin\PpdbController;
+use App\Http\Controllers\Admin\AchievementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,5 +58,5 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     Route::resource('facilities', FacilityController::class);
     Route::post('/facilities/update-order', [FacilityController::class, 'updateOrder'])->name('facilities.update-order');
 
-    Route::get('/ppdb-responses', [PpdbController::class, 'index'])->name('ppdb.index');
+    Route::resource('achievement', AchievementController::class);
 });

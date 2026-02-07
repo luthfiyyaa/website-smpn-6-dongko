@@ -70,22 +70,22 @@
                         <span>Galeri</span>
                     </a>
 
-                    <a href="{{ route('admin.settings.index') }}" 
-                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.settings.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
-                        <i class="fa-solid fa-gear"></i>
-                        <span>Pengaturan</span>
-                    </a>
-
                     <a href="{{ route('admin.facilities.index') }}" 
                        class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.facilities.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
                         <i class="fa-solid fa-building"></i>
                         <span>Fasilitas</span>
                     </a>
 
-                    <a href="{{ route('admin.ppdb.index') }}" 
-                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.ppdb.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
+                    <a href="{{ route('admin.achievement.index') }}" 
+                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.achievement.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span>Prestasi Siswa</span>
+                    </a>
+
+                    <a href="{{ route('admin.settings.index') }}" 
+                       class="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors {{ Request::routeIs('admin.settings.*') ? 'bg-[var(--color-primary)]' : 'hover:bg-[var(--color-neutral-800)]' }}">
                         <i class="fa-solid fa-gear"></i>
-                        <span>Data Siswa</span>
+                        <span>Pengaturan</span>
                     </a>
 
                     <div class="pt-6 mt-6 border-t border-[var(--color-neutral-800)]">

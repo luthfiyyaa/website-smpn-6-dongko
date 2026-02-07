@@ -30,6 +30,17 @@
             <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['total_galleries'] }}</div>
             <div class="text-sm text-gray-600">Gallery Images</div>
         </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-orange-100 p-3 rounded-lg">
+                    <i class="fa-solid fa-trophy text-orange-600"></i>
+                </div>
+                <span class="text-sm text-gray-500">Total</span>
+            </div>
+            <div class="text-3xl font-bold text-gray-900 mb-1">{{ $stats['total_achievements'] }}</div>
+            <div class="text-sm text-gray-600">Prestasi Siswa</div>
+        </div>
     </div>
 
     <!-- Quick Actions -->
@@ -41,8 +52,8 @@
                     <i class="fa-solid fa-plus text-blue-600"></i>
                 </div>
                 <div>
-                    <div class="font-semibold text-gray-900">Create News</div>
-                    <div class="text-sm text-gray-600">Add new article</div>
+                    <div class="font-semibold text-gray-900">Buat Berita</div>
+                    <div class="text-sm text-gray-600">Tambahkan berita baru</div>
                 </div>
             </a>
 
@@ -51,8 +62,18 @@
                     <i class="fa-solid fa-plus text-green-600"></i>
                 </div>
                 <div>
-                    <div class="font-semibold text-gray-900">Upload Photo</div>
-                    <div class="text-sm text-gray-600">Add to gallery</div>
+                    <div class="font-semibold text-gray-900">Upload Foto</div>
+                    <div class="text-sm text-gray-600">Tambahkan foto ke galeri</div>
+                </div>
+            </a>
+
+            <a href="{{ route('admin.achievement.create') }}" class="flex items-center gap-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-orange-500 hover:bg-orange-50 transition-all group">
+                <div class="bg-orange-100 p-3 rounded-lg group-hover:bg-orange-200">
+                    <i class="fa-solid fa-plus text-orange-600"></i>
+                </div>
+                <div>
+                    <div class="font-semibold text-gray-900">Tambahkan Prestasi</div>
+                    <div class="text-sm text-gray-600">Tambah prestasi siswa</div>
                 </div>
             </a>
         </div>
