@@ -134,7 +134,7 @@
                     <div class="bg-green-100 p-2 rounded-lg">
                         <i class="fa-solid fa-calendar text-green-600"></i>
                     </div>
-                    <h2>Jadwal PPDB 2026/2027</h2>
+                    <h2>Jadwal PPDB SMP Negeri 6 Dongko</h2>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
